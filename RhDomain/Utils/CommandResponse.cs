@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace OnboardingSIGDB1.Domain.Utils
+namespace RhDomain.Utils
 {
     public class CommandResponse
     {

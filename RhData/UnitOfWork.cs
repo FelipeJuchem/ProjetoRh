@@ -1,14 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using OnboardingSIGDB1.Domain.Utils;
 using RhData;
 using RhDomain.Interfaces.UnitOfWork;
+using RhDomain.Utils;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
-namespace OnboardingSIGDB1.Data
+namespace RhData
 {
     public class UnitOfWork : IUnitOfWork
     {

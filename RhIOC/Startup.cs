@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using OnboardingSIGDB1.Data;
 using RhData;
 using RhDomain.Interfaces.Repositories;
 using RhDomain.Interfaces.UnitOfWork;
