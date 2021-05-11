@@ -10,7 +10,7 @@ namespace RhDomain.Dto
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
         public double Idade { get; set; }
-        public double Cpf { get; set; }
+        public string Cpf { get; set; }
         public int VagaId { get; set; }
     }
 }

@@ -6,7 +6,7 @@ using System.Text;
 
 namespace RhData.Repositories
 {
-    class CandidatoTecnologiaRepository : Repository<int, CandidatoTecnologia>, ICandidatoTecnologiaRepository
+    public class CandidatoTecnologiaRepository : Repository<int, CandidatoTecnologia>, ICandidatoTecnologiaRepository
     {
         public CandidatoTecnologiaRepository(DataContext dataContext) : base(dataContext)
         {

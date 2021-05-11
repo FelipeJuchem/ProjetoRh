@@ -14,7 +14,7 @@ namespace RhDomain.Entities.Candidatos
         public string Nome { get; private set; }
         public string Sobrenome { get; private set; }
         public double Idade { get; private set; }
-        public double Cpf { get; private set; }
+        public string Cpf { get; private set; }
         public int VagaId { get; private set; }
         public Vaga Vaga { get; private set; }
         public IList<CandidatoTecnologia> CandidatoTecnologia { get; private set; }
@@ -24,7 +24,7 @@ namespace RhDomain.Entities.Candidatos
 
         }
 
-        public Candidato(string nome, string sobrenome, double idade, double cpf)
+        public Candidato(string nome, string sobrenome, double idade, string cpf)
         {
             Nome = nome;
             Sobrenome = sobrenome;

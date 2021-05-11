@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RhDomain.Interfaces.Repositories;
+using RhDomain.Interfaces.UnitOfWork;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace RhData
     {
         private readonly DbSet<TEntity> _dbSet;
         private readonly DataContext _dataContext;
-
+        
         public Repository(DataContext dataContext)
         {
             _dataContext = dataContext;
@@ -23,13 +24,11 @@ namespace RhData
         public void Armazenar(TEntity objeto)
         {
             _dbSet.Add(objeto);
-            _dataContext.SaveChanges();
         }
 
         public void Excluir(TEntity objeto)
         {
             _dbSet.Remove(objeto);
-            _dataContext.SaveChanges();
         }
 
         public TEntity BuscarPorId(TId id)
@@ -45,7 +44,6 @@ namespace RhData
         public TEntity Alterador(TEntity objeto)
         {
             _dbSet.Update(objeto);
-            _dataContext.SaveChanges();
             return objeto;
         }
     }
