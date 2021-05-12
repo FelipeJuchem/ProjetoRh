@@ -12,11 +12,14 @@ namespace RhAPI.Controllers.CandidatosController
     [ApiController]
     public class CandidatosController : Controller
     {
+        private readonly ICandidatoExcluidor _candidatoExcluidor;
         private readonly ICandidatoConsulta _candidatoConsulta;
         private readonly ICandidatoArmazenador _candidatoArmazenador;
 
-        public CandidatosController(ICandidatoConsulta candidatoConsulta, ICandidatoArmazenador candidatoArmazenador)
+        public CandidatosController(ICandidatoConsulta candidatoConsulta, ICandidatoArmazenador candidatoArmazenador,
+            ICandidatoExcluidor candidatoExcluidor)
         {
+            _candidatoExcluidor = candidatoExcluidor;
             _candidatoConsulta = candidatoConsulta;
             _candidatoArmazenador = candidatoArmazenador;
         }
@@ -39,5 +42,10 @@ namespace RhAPI.Controllers.CandidatosController
             return _candidatoArmazenador.IncluirCandidato(candidatoDto);
         }
 
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+            _candidatoExcluidor.ExcluirCandidatoPeloId(id);
+        }
     }
 }

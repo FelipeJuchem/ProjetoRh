@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RhDomain.Entities.Candidatos;
-using RhDomain.Entities.CandidatosTecnologias;
 using RhDomain.Entities.Tecnologias;
 using RhDomain.Entities.Vagas;
 using RhDomain.Entities.VagasTecnologias;
@@ -22,10 +21,8 @@ namespace RhData
         public DbSet<Candidato> Candidato { get; set; }
         public DbSet<Tecnologia> Tecnologia { get; set; }
         public DbSet<Vaga> Vaga { get; set; }
-        public DbSet<CandidatoTecnologia> CandidatoTecnologia { get; set; }
-        public DbSet<VagaTecnologia> vagaTecnologia { get; set; }
-
-
+        public DbSet<VagaTecnologia> VagasTecnologias  { get; set; }
+        
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -72,33 +69,17 @@ namespace RhData
                 .IsRequired()
                 .HasMaxLength(6000);
 
-            
-
-            var candidatoTecnologia = modelBuilder.Entity<CandidatoTecnologia>();
-
-            candidatoTecnologia.HasKey(x => new { x.CandidatoId, x.TecnologiaId });
-
-            candidatoTecnologia.HasOne(x => x.Candidato)
-                .WithMany(x => x.CandidatoTecnologia)
-                .OnDelete(DeleteBehavior.Restrict)
-                .HasForeignKey(x => x.CandidatoId);
-
-            candidatoTecnologia.HasOne(x => x.Tecnologia)
-                .WithMany(x => x.CandidatoTecnologia)
-                .OnDelete(DeleteBehavior.Restrict)
-                .HasForeignKey(x => x.TecnologiaId);
-
             var vagaTecnologia = modelBuilder.Entity<VagaTecnologia>();
 
             vagaTecnologia.HasKey(x => new { x.TecnologiaId, x.VagaId });
 
-            vagaTecnologia.HasOne(x => x.Tecnologia)
-                .WithMany(x => x.VagaTecnologia)
+            vagaTecnologia.HasOne(x => x.Tecnologias)
+                .WithMany(x => x.VagasTecnologias)
                 .OnDelete(DeleteBehavior.Restrict)
                 .HasForeignKey(x => x.TecnologiaId);
 
-            vagaTecnologia.HasOne(x => x.Vaga)
-                .WithMany(x => x.VagaTecnologia)
+            vagaTecnologia.HasOne(x => x.Vagas)
+                .WithMany(x => x.VagasTecnologias)
                 .OnDelete(DeleteBehavior.Restrict)
                 .HasForeignKey(x => x.VagaId);
 

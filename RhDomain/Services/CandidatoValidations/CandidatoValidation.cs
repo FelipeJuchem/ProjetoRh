@@ -45,7 +45,7 @@ namespace RhDomain.Services.CandidatoValidations
 
         public bool VerificarSeCpfEstaPreenchido(CandidatoDto candidatoDto)
         {
-            if(string.IsNullOrWhiteSpace(candidatoDto.Cpf))
+            if(string.IsNullOrEmpty(candidatoDto.Cpf))
             {
                 return false;
             }
