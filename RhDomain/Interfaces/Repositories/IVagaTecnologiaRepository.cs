@@ -7,5 +7,6 @@ namespace RhDomain.Interfaces.Repositories
 {
     public interface IVagaTecnologiaRepository : IRepository<int, VagaTecnologia>
     {
+      
     }
 }

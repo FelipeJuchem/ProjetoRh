@@ -2,24 +2,10 @@
 
 namespace RhData.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class initialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
-                name: "Tecnologia",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Descricao = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
-                    Peso = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Tecnologia", x => x.Id);
-                });
-
             migrationBuilder.CreateTable(
                 name: "Vaga",
                 columns: table => new
@@ -42,7 +28,7 @@ namespace RhData.Migrations
                     Nome = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
                     Sobrenome = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
                     Idade = table.Column<double>(type: "float", nullable: false),
-                    Cpf = table.Column<double>(type: "float", nullable: false),
+                    Cpf = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     VagaId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -57,49 +43,46 @@ namespace RhData.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "vagaTecnologia",
+                name: "Tecnologia",
                 columns: table => new
                 {
-                    VagaId = table.Column<int>(type: "int", nullable: false),
-                    TecnologiaId = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Descricao = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
+                    CandidatoId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_vagaTecnologia", x => new { x.TecnologiaId, x.VagaId });
+                    table.PrimaryKey("PK_Tecnologia", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_vagaTecnologia_Tecnologia_TecnologiaId",
-                        column: x => x.TecnologiaId,
-                        principalTable: "Tecnologia",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_vagaTecnologia_Vaga_VagaId",
-                        column: x => x.VagaId,
-                        principalTable: "Vaga",
+                        name: "FK_Tecnologia_Candidato_CandidatoId",
+                        column: x => x.CandidatoId,
+                        principalTable: "Candidato",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
-                name: "CandidatoTecnologia",
+                name: "VagaTecnologia",
                 columns: table => new
                 {
-                    CandidatoId = table.Column<int>(type: "int", nullable: false),
-                    TecnologiaId = table.Column<int>(type: "int", nullable: false)
+                    VagaId = table.Column<int>(type: "int", nullable: false),
+                    TecnologiaId = table.Column<int>(type: "int", nullable: false),
+                    Peso = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_CandidatoTecnologia", x => new { x.CandidatoId, x.TecnologiaId });
+                    table.PrimaryKey("PK_VagaTecnologia", x => new { x.TecnologiaId, x.VagaId });
                     table.ForeignKey(
-                        name: "FK_CandidatoTecnologia_Candidato_CandidatoId",
-                        column: x => x.CandidatoId,
-                        principalTable: "Candidato",
+                        name: "FK_VagaTecnologia_Tecnologia_TecnologiaId",
+                        column: x => x.TecnologiaId,
+                        principalTable: "Tecnologia",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_CandidatoTecnologia_Tecnologia_TecnologiaId",
-                        column: x => x.TecnologiaId,
-                        principalTable: "Tecnologia",
+                        name: "FK_VagaTecnologia_Vaga_VagaId",
+                        column: x => x.VagaId,
+                        principalTable: "Vaga",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -110,29 +93,26 @@ namespace RhData.Migrations
                 column: "VagaId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_CandidatoTecnologia_TecnologiaId",
-                table: "CandidatoTecnologia",
-                column: "TecnologiaId");
+                name: "IX_Tecnologia_CandidatoId",
+                table: "Tecnologia",
+                column: "CandidatoId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_vagaTecnologia_VagaId",
-                table: "vagaTecnologia",
+                name: "IX_VagaTecnologia_VagaId",
+                table: "VagaTecnologia",
                 column: "VagaId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "CandidatoTecnologia");
-
-            migrationBuilder.DropTable(
-                name: "vagaTecnologia");
-
-            migrationBuilder.DropTable(
-                name: "Candidato");
+                name: "VagaTecnologia");
 
             migrationBuilder.DropTable(
                 name: "Tecnologia");
+
+            migrationBuilder.DropTable(
+                name: "Candidato");
 
             migrationBuilder.DropTable(
                 name: "Vaga");

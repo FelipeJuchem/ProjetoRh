@@ -1,5 +1,4 @@
 ﻿using RhDomain.Dto;
-using RhDomain.Entities.Candidatos;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace RhDomain.Interfaces.Services
 {
-    public interface ICandidatoConsulta
+    public interface ITecnologiaConsulta
     {
-        Task<List<CandidatoDto>> ObterListaCandidatos();
-        CandidatoDto ObterPorId(int id);
+        Task<List<TecnologiaDto>> ObterListaDeTecnologias();
+
+        TecnologiaDto ObterTecnologiaPorId(int id);
+
+
     }
 }

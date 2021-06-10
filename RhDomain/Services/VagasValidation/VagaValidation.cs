@@ -8,7 +8,7 @@ namespace RhDomain.Services.VagasValidation
 {
     public class VagaValidation : IVagaValidation
     {
-        public bool ValidaSeVagaDtoEstaPreenchido(VagaDto vagaDto)
+        public bool ValidaSeVagaDtoEstaPreenchido(VagaComTecnologiaDto vagaDto)
         {
             if (string.IsNullOrEmpty(vagaDto.Descricao))
             {

@@ -31,6 +31,15 @@ namespace RhDomain.Entities.Candidatos
             VagaId = vagaId;
         }
 
+        public void Atualizar(string nome, string sobrenome, double idade, string cpf, int vagaId)
+        {
+            Nome = nome;
+            Sobrenome = sobrenome;
+            Idade = idade;
+            Cpf = cpf;
+            VagaId = vagaId;
+        }
+
 
 
 

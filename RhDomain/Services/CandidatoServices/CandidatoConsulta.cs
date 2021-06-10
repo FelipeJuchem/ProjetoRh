@@ -6,6 +6,7 @@ using RhDomain.Interfaces.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace RhDomain.Services.CandidatoServices
 {
@@ -19,9 +20,9 @@ namespace RhDomain.Services.CandidatoServices
             _mapper = mapper;
             _candidatoRepository = candidatoRepository;
         }
-        public List<CandidatoDto> ObterListaCandidatos()
+        public async Task<List<CandidatoDto>> ObterListaCandidatos()
         {
-            var listaCandidatos = _candidatoRepository.BuscarLista();
+            var listaCandidatos = await _candidatoRepository.BuscarLista();
             var listaCandidatosDto = _mapper.Map<List<CandidatoDto>>(listaCandidatos);
             return listaCandidatosDto;
         }

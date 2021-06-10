@@ -6,8 +6,8 @@ using System.Text;
 
 namespace RhDomain.Interfaces.Services
 {
-    public interface IVagaArmazenador
+    public interface ITecnologiaArmazenador
     {
-        ActionResult<VagaComTecnologiaDto> IncluirVaga(VagaComTecnologiaDto VagaDto);
+        ActionResult<TecnologiaDto> IncluirTecnologia(TecnologiaDto tecnologiaDto);
     }
 }

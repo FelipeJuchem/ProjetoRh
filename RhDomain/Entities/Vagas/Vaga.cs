@@ -11,15 +11,20 @@ namespace RhDomain.Entities.Vagas
     {
         public int Id { get; private set; }
         public string Descricao { get; private set; }
-        public IList<Candidato> Candidatos { get; private set; }
+        public IList<Candidato> Candidatos { get; set; }
         public IList<VagaTecnologia> VagasTecnologias { get; private set; }
 
-        public Vaga()
+        protected Vaga()
         {
 
         }
 
         public Vaga(string descricao)
+        {
+            Descricao = descricao;
+        }
+
+        public void Atualizar(string descricao)
         {
             Descricao = descricao;
         }

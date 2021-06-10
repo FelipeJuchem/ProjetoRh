@@ -10,8 +10,21 @@ namespace RhDomain.Entities.VagasTecnologias
     {
         public int VagaId { get; set; }
         public int TecnologiaId { get; set; }
-        public Vaga Vagas { get; set; }
-        public Tecnologia Tecnologias { get; set; }
+        public int Peso { get; set; }
+        public virtual Vaga Vaga { get; set; }
+        public virtual Tecnologia Tecnologia { get; set; }
+
+
+        public VagaTecnologia(int vagaId, int tecnologiaId, int peso)
+        {
+            VagaId = vagaId;
+            TecnologiaId = tecnologiaId;
+            Peso = peso;
+        }
+
+
 
     }
+
+    
 }

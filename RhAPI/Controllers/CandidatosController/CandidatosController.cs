@@ -15,19 +15,21 @@ namespace RhAPI.Controllers.CandidatosController
         private readonly ICandidatoExcluidor _candidatoExcluidor;
         private readonly ICandidatoConsulta _candidatoConsulta;
         private readonly ICandidatoArmazenador _candidatoArmazenador;
+        private readonly ICandidatoAlterador _candidatoAlterador;
 
         public CandidatosController(ICandidatoConsulta candidatoConsulta, ICandidatoArmazenador candidatoArmazenador,
-            ICandidatoExcluidor candidatoExcluidor)
+            ICandidatoExcluidor candidatoExcluidor, ICandidatoAlterador candidatoAlterador)
         {
             _candidatoExcluidor = candidatoExcluidor;
             _candidatoConsulta = candidatoConsulta;
             _candidatoArmazenador = candidatoArmazenador;
+            _candidatoAlterador = candidatoAlterador;
         }
 
         [HttpGet]
         public async Task<ActionResult<List<CandidatoDto>>> Get()
         {
-            return _candidatoConsulta.ObterListaCandidatos();
+            return await _candidatoConsulta.ObterListaCandidatos();
         }
 
         [HttpGet("{id}")]
@@ -40,6 +42,12 @@ namespace RhAPI.Controllers.CandidatosController
         public ActionResult<CandidatoDto> Post([FromBody] CandidatoDto candidatoDto)
         {
             return _candidatoArmazenador.IncluirCandidato(candidatoDto);
+        }
+
+        [HttpPut]
+        public ActionResult<CandidatoDto> Put(CandidatoDto candidatoDto)
+        {
+            return _candidatoAlterador.Alterar(candidatoDto);
         }
 
         [HttpDelete("{id}")]

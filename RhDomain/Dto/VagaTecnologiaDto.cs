@@ -8,5 +8,6 @@ namespace RhDomain.Dto
     {
         public int VagaId { get; set; }
         public int TecnologiaId { get; set; }
+        public int Peso { get; set; }
     }
 }

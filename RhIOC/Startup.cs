@@ -6,12 +6,16 @@ using RhData.Repositories;
 using RhDomain.Interfaces.Repositories;
 using RhDomain.Interfaces.Services;
 using RhDomain.Interfaces.Services.CandidatoValidationInterface;
+using RhDomain.Interfaces.Services.TecnologiaValidation;
 using RhDomain.Interfaces.Services.VagaValidationInterface;
 using RhDomain.Interfaces.UnitOfWork;
 using RhDomain.Services.CandidatoServices;
 using RhDomain.Services.CandidatoValidations;
+using RhDomain.Services.TecnologiaServices;
+using RhDomain.Services.TecnologiaValidations;
 using RhDomain.Services.VagaServices;
 using RhDomain.Services.VagasValidation;
+using RhDomain.Services.VagaTecnologiaServices;
 using System;
 
 namespace RhIOC
@@ -33,6 +37,16 @@ namespace RhIOC
             services.AddScoped(typeof(IVagaArmazenador), typeof(VagaArmazenador));
             services.AddScoped(typeof(IVagaValidation), typeof(VagaValidation));
             services.AddScoped(typeof(IVagaConsulta), typeof(VagaConsulta));
+            services.AddScoped(typeof(IVagaAlterador), typeof(VagaAlterador));
+            services.AddScoped(typeof(IVagaExcluidor), typeof(VagaExcluidor));
+            services.AddScoped(typeof(ICandidatoAlterador), typeof(CandidatoAlterador));
+            services.AddScoped(typeof(ITecnologiaValidation), typeof(TecnologiaValidation));
+            services.AddScoped(typeof(ITecnologiaArmazenador), typeof(TecnologiaArmazenador));
+            services.AddScoped(typeof(ITecnologiaConsulta), typeof(TecnologiaConsulta));
+            services.AddScoped(typeof(ITecnologiaRepository), typeof(TecnologiaRepository));
+            services.AddScoped(typeof(ITecnologiaExcluidor), typeof(TecnologiaExcluidor));
+            services.AddScoped(typeof(ITecnologiaAlterador), typeof(TecnologiaAlterador));
+            services.AddScoped(typeof(IVagaTecnologiaArmazenador), typeof(VagaTecnologiaArmazenador));
         }
     }
     

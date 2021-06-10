@@ -11,7 +11,6 @@ namespace RhDomain.Entities.Tecnologias
     {
         public int Id { get; private set; }
         public string Descricao { get; private set; }
-        public int Peso { get; private set; }
         public IList<VagaTecnologia> VagasTecnologias { get; private set; }
 
         public Tecnologia()
@@ -19,10 +18,14 @@ namespace RhDomain.Entities.Tecnologias
 
         }
 
-        public Tecnologia(string descricao, int peso)
+        public Tecnologia(string descricao)
         {
             Descricao = descricao;
-            Peso = peso;
+        }
+
+        public void AtualizarDescricao(string descricao)
+        {
+            Descricao = descricao;
         }
     }
 }

@@ -1,10 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using RhDomain.Dto;
+using RhDomain.Entities.Vagas;
 using RhDomain.Interfaces.Repositories;
 using RhDomain.Interfaces.UnitOfWork;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace RhData
 {
@@ -36,9 +39,9 @@ namespace RhData
             return _dbSet.Find(id);
         }
 
-        public List<TEntity> BuscarLista()
+        public async Task<List<TEntity>> BuscarLista()
         {
-            return _dbSet.ToList();
+            return await _dbSet.ToListAsync();
         }
 
         public TEntity Alterador(TEntity objeto)

@@ -68,9 +68,6 @@ namespace RhData.Migrations
                         .HasMaxLength(250)
                         .HasColumnType("nvarchar(250)");
 
-                    b.Property<int>("Peso")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("CandidatoId");
@@ -103,11 +100,14 @@ namespace RhData.Migrations
                     b.Property<int>("VagaId")
                         .HasColumnType("int");
 
+                    b.Property<int>("Peso")
+                        .HasColumnType("int");
+
                     b.HasKey("TecnologiaId", "VagaId");
 
                     b.HasIndex("VagaId");
 
-                    b.ToTable("VagasTecnologias");
+                    b.ToTable("VagaTecnologia");
                 });
 
             modelBuilder.Entity("RhDomain.Entities.Candidatos.Candidato", b =>
@@ -130,21 +130,21 @@ namespace RhData.Migrations
 
             modelBuilder.Entity("RhDomain.Entities.VagasTecnologias.VagaTecnologia", b =>
                 {
-                    b.HasOne("RhDomain.Entities.Tecnologias.Tecnologia", "Tecnologias")
+                    b.HasOne("RhDomain.Entities.Tecnologias.Tecnologia", "Tecnologia")
                         .WithMany("VagasTecnologias")
                         .HasForeignKey("TecnologiaId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("RhDomain.Entities.Vagas.Vaga", "Vagas")
+                    b.HasOne("RhDomain.Entities.Vagas.Vaga", "Vaga")
                         .WithMany("VagasTecnologias")
                         .HasForeignKey("VagaId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.Navigation("Tecnologias");
+                    b.Navigation("Tecnologia");
 
-                    b.Navigation("Vagas");
+                    b.Navigation("Vaga");
                 });
 
             modelBuilder.Entity("RhDomain.Entities.Candidatos.Candidato", b =>

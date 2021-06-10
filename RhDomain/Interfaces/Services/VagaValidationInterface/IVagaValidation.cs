@@ -7,6 +7,6 @@ namespace RhDomain.Interfaces.Services.VagaValidationInterface
 {
     public interface IVagaValidation
     {
-        bool ValidaSeVagaDtoEstaPreenchido(VagaDto vagaDto);
+        bool ValidaSeVagaDtoEstaPreenchido(VagaComTecnologiaDto vagaDto);
     }
 }

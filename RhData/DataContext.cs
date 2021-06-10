@@ -21,7 +21,7 @@ namespace RhData
         public DbSet<Candidato> Candidato { get; set; }
         public DbSet<Tecnologia> Tecnologia { get; set; }
         public DbSet<Vaga> Vaga { get; set; }
-        public DbSet<VagaTecnologia> VagasTecnologias  { get; set; }
+        public DbSet<VagaTecnologia> VagaTecnologia  { get; set; }
         
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -38,7 +38,7 @@ namespace RhData
             candidato.Property(x => x.Nome)
                 .IsRequired()
                 .HasMaxLength(250);
-
+            
             candidato.Property(x => x.Sobrenome)
                 .IsRequired()
                 .HasMaxLength(250);
@@ -60,8 +60,9 @@ namespace RhData
                 .IsRequired()
                 .HasMaxLength(250);
 
-            tecnologia.Property(x => x.Peso)
-                .IsRequired();
+            tecnologia.HasMany(x => x.VagasTecnologias)
+                .WithOne(x => x.Tecnologia)
+                .HasForeignKey(x => x.TecnologiaId);
 
             var vaga = modelBuilder.Entity<Vaga>();
 
@@ -69,16 +70,19 @@ namespace RhData
                 .IsRequired()
                 .HasMaxLength(6000);
 
+           
+
+            
             var vagaTecnologia = modelBuilder.Entity<VagaTecnologia>();
 
             vagaTecnologia.HasKey(x => new { x.TecnologiaId, x.VagaId });
 
-            vagaTecnologia.HasOne(x => x.Tecnologias)
+            vagaTecnologia.HasOne(x => x.Tecnologia)
                 .WithMany(x => x.VagasTecnologias)
                 .OnDelete(DeleteBehavior.Restrict)
                 .HasForeignKey(x => x.TecnologiaId);
 
-            vagaTecnologia.HasOne(x => x.Vagas)
+            vagaTecnologia.HasOne(x => x.Vaga)
                 .WithMany(x => x.VagasTecnologias)
                 .OnDelete(DeleteBehavior.Restrict)
                 .HasForeignKey(x => x.VagaId);

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace RhDomain.Interfaces.Repositories
 {
@@ -14,7 +15,7 @@ namespace RhDomain.Interfaces.Repositories
 
         TEntity BuscarPorId(TId Id);
 
-        List<TEntity> BuscarLista();
+        Task<List<TEntity>> BuscarLista();
 
         TEntity Alterador(TEntity obj);
     }
