@@ -7,6 +7,8 @@ namespace RhDomain.Interfaces.Repositories
 {
     public interface IVagaTecnologiaRepository : IRepository<int, VagaTecnologia>
     {
-      
+        VagaTecnologia BuscaVagaTecnologiaPorIdDuplo(int vagaId, int tecnologiaId);
+        VagaTecnologia BuscaVagaTecnologiaPorTecnologiaId(int tecnologiaId);
+        VagaTecnologia BuscaVagaTecnologiaPorVagaId(int vagaId);
     }
 }

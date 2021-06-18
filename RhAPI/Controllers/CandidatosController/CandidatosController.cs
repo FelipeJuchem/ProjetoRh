@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RhDomain.Dto;
+using RhDomain.Entities.Candidatos;
 using RhDomain.Interfaces.Services;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,13 @@ namespace RhAPI.Controllers.CandidatosController
             _candidatoAlterador = candidatoAlterador;
         }
 
+        [HttpGet("candidatoETecnologia/{id}")]
+        public ActionResult<CandidatoComTecnologiaDto> Get(int id)
+        {
+            return _candidatoConsulta.ObterCandidatoComTecnologia(id);
+        }
+
+
         [HttpGet]
         public async Task<ActionResult<List<CandidatoDto>>> Get()
         {
@@ -33,7 +41,7 @@ namespace RhAPI.Controllers.CandidatosController
         }
 
         [HttpGet("{id}")]
-        public ActionResult<CandidatoDto> Get(int id)
+        public ActionResult<CandidatoDto> GetById(int id)
         {
             return _candidatoConsulta.ObterPorId(id);
         }
@@ -55,5 +63,5 @@ namespace RhAPI.Controllers.CandidatosController
         {
             _candidatoExcluidor.ExcluirCandidatoPeloId(id);
         }
-    }
+}
 }

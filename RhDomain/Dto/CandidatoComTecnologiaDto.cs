@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RhDomain.Dto
 {
-    public class CandidatoDto
+    public class CandidatoComTecnologiaDto
     {
         public int Id { get; set; }
         public string Nome { get; set; }
@@ -12,7 +12,6 @@ namespace RhDomain.Dto
         public double Idade { get; set; }
         public string Cpf { get; set; }
         public int VagaId { get; set; }
-        public string VagaDescricao { get; set; }
         public List<TecnologiaDto> Tecnologias { get; set; }
 
     }

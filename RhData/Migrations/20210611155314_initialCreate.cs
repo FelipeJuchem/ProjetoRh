@@ -7,6 +7,19 @@ namespace RhData.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Tecnologia",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Descricao = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Tecnologia", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Vaga",
                 columns: table => new
                 {
@@ -43,26 +56,6 @@ namespace RhData.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Tecnologia",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Descricao = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
-                    CandidatoId = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Tecnologia", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Tecnologia_Candidato_CandidatoId",
-                        column: x => x.CandidatoId,
-                        principalTable: "Candidato",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "VagaTecnologia",
                 columns: table => new
                 {
@@ -78,13 +71,37 @@ namespace RhData.Migrations
                         column: x => x.TecnologiaId,
                         principalTable: "Tecnologia",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_VagaTecnologia_Vaga_VagaId",
                         column: x => x.VagaId,
                         principalTable: "Vaga",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "CandidatoTecnologia",
+                columns: table => new
+                {
+                    CandidatoId = table.Column<int>(type: "int", nullable: false),
+                    TecnologiaId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CandidatoTecnologia", x => new { x.CandidatoId, x.TecnologiaId });
+                    table.ForeignKey(
+                        name: "FK_CandidatoTecnologia_Candidato_CandidatoId",
+                        column: x => x.CandidatoId,
+                        principalTable: "Candidato",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_CandidatoTecnologia_Tecnologia_TecnologiaId",
+                        column: x => x.TecnologiaId,
+                        principalTable: "Tecnologia",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
@@ -93,9 +110,9 @@ namespace RhData.Migrations
                 column: "VagaId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Tecnologia_CandidatoId",
-                table: "Tecnologia",
-                column: "CandidatoId");
+                name: "IX_CandidatoTecnologia_TecnologiaId",
+                table: "CandidatoTecnologia",
+                column: "TecnologiaId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_VagaTecnologia_VagaId",
@@ -106,13 +123,16 @@ namespace RhData.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "CandidatoTecnologia");
+
+            migrationBuilder.DropTable(
                 name: "VagaTecnologia");
 
             migrationBuilder.DropTable(
-                name: "Tecnologia");
+                name: "Candidato");
 
             migrationBuilder.DropTable(
-                name: "Candidato");
+                name: "Tecnologia");
 
             migrationBuilder.DropTable(
                 name: "Vaga");

@@ -10,8 +10,8 @@ namespace RhDomain.Interfaces.Services
 {
     public interface IVagaConsulta
     {
-        Task<List<VagaComTecnologiaDto>> ObterListaDeVagas();
-        VagaComTecnologiaDto ObterVagaComTecnologiaPorId(int id);
+        Task<List<VagaComTecnologiaECandidatosDto>> ObterListaDeVagas();
+        VagaComTecnologiaECandidatosDto ObterVagaComTecnologiaPorId(int id);
 
     }
 }

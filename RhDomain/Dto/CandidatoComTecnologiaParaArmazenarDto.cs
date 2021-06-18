@@ -4,10 +4,11 @@ using System.Text;
 
 namespace RhDomain.Dto
 {
-    public class CandidatoTecnologiaDto
+    public class CandidatoComTecnologiaParaArmazenarDto
     {
-        public int TecnologiaId { get; set; }
         public int CandidatoId { get; set; }
+        public int VagaId { get; set; }
+        public int TecnologiaId { get; set; }
         public int Peso { get; set; }
     }
 }

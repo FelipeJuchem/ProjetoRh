@@ -24,7 +24,11 @@ namespace RhData.Repositories
                 .Where(x => x.Id == id)
                 .Include(y => y.VagasTecnologias)
                 .ThenInclude(l => l.Tecnologia)
+                .Include(k => k.Candidatos)
+                .ThenInclude(o => o.CandidatosTecnologias)
                 .FirstOrDefault();
         }
+
+       
     }
 }

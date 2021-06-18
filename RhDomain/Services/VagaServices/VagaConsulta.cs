@@ -22,17 +22,17 @@ namespace RhDomain.Services.VagaServices
             _mapper = mapper; 
             _vagaRepository = vagaRepository;
         }
-        public async Task<List<VagaComTecnologiaDto>> ObterListaDeVagas()
+        public async Task<List<VagaComTecnologiaECandidatosDto>> ObterListaDeVagas()
         {
             var listaVaga = await _vagaRepository.BuscarLista();
-            var listaVagaDto = _mapper.Map<List<VagaComTecnologiaDto>>(listaVaga);
+            var listaVagaDto = _mapper.Map<List<VagaComTecnologiaECandidatosDto>>(listaVaga);
             return listaVagaDto;
         }
 
-        public VagaComTecnologiaDto ObterVagaComTecnologiaPorId(int id)
+        public VagaComTecnologiaECandidatosDto ObterVagaComTecnologiaPorId(int id)
         {
             var vaga = _vagaRepository.BuscaVagaComInclude(id);
-            return _mapper.Map<VagaComTecnologiaDto>(vaga);
+            return _mapper.Map<VagaComTecnologiaECandidatosDto>(vaga);
             
             //List<TecnologiaDto> tecnologiasDto = new List<TecnologiaDto>();
             //foreach(VagaTecnologia vagaTecnnologia in vaga.VagasTecnologias)

@@ -1,4 +1,5 @@
 ﻿using RhDomain.Entities.Candidatos;
+using RhDomain.Entities.CandidatosTecnologias;
 using RhDomain.Entities.Vagas;
 using RhDomain.Entities.VagasTecnologias;
 using System;
@@ -12,6 +13,7 @@ namespace RhDomain.Entities.Tecnologias
         public int Id { get; private set; }
         public string Descricao { get; private set; }
         public IList<VagaTecnologia> VagasTecnologias { get; private set; }
+        public IList<CandidatoTecnologia> CandidatosTecnologias { get; private set; }
 
         public Tecnologia()
         {

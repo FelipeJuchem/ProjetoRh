@@ -25,7 +25,7 @@ namespace RhDomain.Services.VagaServices
             _vagaRepository = vagaRepository;
         }
 
-        public ActionResult<VagaComTecnologiaDto> IncluirVaga(VagaComTecnologiaDto vagaDto)
+        public ActionResult<VagaComTecnologiaECandidatosDto> IncluirVaga(VagaComTecnologiaECandidatosDto vagaDto)
         {
             if (_vagaValidation.ValidaSeVagaDtoEstaPreenchido(vagaDto))
             {

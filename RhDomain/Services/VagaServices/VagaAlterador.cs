@@ -22,7 +22,7 @@ namespace RhDomain.Services.VagaServices
             _vagaValidation = vagaValidation;
         }
 
-        public VagaComTecnologiaDto Alterar(VagaComTecnologiaDto vagaDto)
+        public VagaComTecnologiaECandidatosDto Alterar(VagaComTecnologiaECandidatosDto vagaDto)
         {
             if (_vagaValidation.ValidaSeVagaDtoEstaPreenchido(vagaDto))
             {

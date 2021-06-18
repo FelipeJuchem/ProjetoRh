@@ -28,12 +28,22 @@ namespace RhDomain.Services.CandidatoServices
         {
             if (_candidatoValidation.validar(candidatoDto))
             {
-                var candidato = new Candidato(candidatoDto.Nome, candidatoDto.Sobrenome, candidatoDto.Idade, candidatoDto.Cpf, candidatoDto.VagaId);
+                var candidato = new Candidato(
+                    candidatoDto.Nome,
+                    candidatoDto.Sobrenome,
+                    candidatoDto.Idade,
+                    candidatoDto.Cpf,
+                    candidatoDto.VagaId
+
+                    );
+                
                 _candidatoRepository.Armazenar(candidato);
                 _uow.Commit();
                 return candidatoDto;
             }
             return null;
         }
+
+        
     }
 }

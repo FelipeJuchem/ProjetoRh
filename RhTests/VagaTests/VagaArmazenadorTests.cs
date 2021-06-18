@@ -30,7 +30,7 @@ namespace RhTests.VagaTests
         public void DeveArmazenarVaga()
         {
             CriaSetupComVagaValida();
-            var vagaDto = new VagaComTecnologiaDto
+            var vagaDto = new VagaComTecnologiaECandidatosDto
             {
                 Descricao = "Teste"
             };
@@ -44,7 +44,7 @@ namespace RhTests.VagaTests
         public void NaoDeveArmazenarVaga()
         {
             CriaSetupComVagaInvalida();
-            var vagaDto = new VagaComTecnologiaDto
+            var vagaDto = new VagaComTecnologiaECandidatosDto
             {
                 Descricao = "Teste"
             };
@@ -58,12 +58,12 @@ namespace RhTests.VagaTests
 
         public void CriaSetupComVagaValida()
         {
-            _vagaValidationMock.Setup(x => x.ValidaSeVagaDtoEstaPreenchido(It.IsAny<VagaComTecnologiaDto>())).Returns(true);
+            _vagaValidationMock.Setup(x => x.ValidaSeVagaDtoEstaPreenchido(It.IsAny<VagaComTecnologiaECandidatosDto>())).Returns(true);
         }
 
         public void CriaSetupComVagaInvalida()
         {
-            _vagaValidationMock.Setup(x => x.ValidaSeVagaDtoEstaPreenchido(It.IsAny<VagaComTecnologiaDto>())).Returns(false);
+            _vagaValidationMock.Setup(x => x.ValidaSeVagaDtoEstaPreenchido(It.IsAny<VagaComTecnologiaECandidatosDto>())).Returns(false);
         }
 
 

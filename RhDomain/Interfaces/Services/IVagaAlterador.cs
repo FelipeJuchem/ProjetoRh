@@ -7,6 +7,6 @@ namespace RhDomain.Interfaces.Services
 {
     public interface IVagaAlterador
     {
-        VagaComTecnologiaDto Alterar(VagaComTecnologiaDto vagaDto);
+        VagaComTecnologiaECandidatosDto Alterar(VagaComTecnologiaECandidatosDto vagaDto);
     }
 }

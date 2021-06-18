@@ -8,6 +8,6 @@ namespace RhDomain.Interfaces.Services
 {
     public interface IVagaArmazenador
     {
-        ActionResult<VagaComTecnologiaDto> IncluirVaga(VagaComTecnologiaDto VagaDto);
+        ActionResult<VagaComTecnologiaECandidatosDto> IncluirVaga(VagaComTecnologiaECandidatosDto VagaDto);
     }
 }

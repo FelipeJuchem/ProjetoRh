@@ -11,5 +11,9 @@ namespace RhDomain.Interfaces.Services
     {
         Task<List<CandidatoDto>> ObterListaCandidatos();
         CandidatoDto ObterPorId(int id);
+
+        CandidatoComTecnologiaDto ObterCandidatoComTecnologia(int id);
+        CandidatoComTecnologiaParaArmazenarDto BuscarParaArmazenarCandidatoTecnologia(
+            CandidatoComTecnologiaParaArmazenarDto candidatoComTecnologiaParaArmazenarDto);
     }
 }

@@ -28,31 +28,31 @@ namespace RhAPI.Controllers.VagasController
             _vagaExcluidor = vagaExcluidor;
         }
         [HttpPost]
-        public ActionResult<VagaComTecnologiaDto> Post([FromBody] VagaComTecnologiaDto vagaDto)
+        public ActionResult<VagaComTecnologiaECandidatosDto> Post([FromBody] VagaComTecnologiaECandidatosDto vagaDto)
         {
             return _vagaArmazenador.IncluirVaga(vagaDto);
         }
 
         [HttpGet]
-        public async Task<List<VagaComTecnologiaDto>> Get()
+        public async Task<List<VagaComTecnologiaECandidatosDto>> Get()
         {
             return await _vagaConsulta.ObterListaDeVagas();
         }
 
         [HttpGet("{id}")]
-        public ActionResult<VagaComTecnologiaDto> Get(int id)
+        public ActionResult<VagaComTecnologiaECandidatosDto> Get(int id)
         {
             return _vagaConsulta.ObterVagaComTecnologiaPorId(id);
         }
 
         [HttpGet("GetTeste/{id}")]
-        public ActionResult<VagaComTecnologiaDto> GetTeste(int id)
+        public ActionResult<VagaComTecnologiaECandidatosDto> GetTeste(int id)
         {
             return _vagaConsulta.ObterVagaComTecnologiaPorId(id);
         }
 
         [HttpPut]
-        public ActionResult<VagaComTecnologiaDto> Put(VagaComTecnologiaDto vagaDto)
+        public ActionResult<VagaComTecnologiaECandidatosDto> Put(VagaComTecnologiaECandidatosDto vagaDto)
         {
             return _vagaAlterador.Alterar(vagaDto);
         }

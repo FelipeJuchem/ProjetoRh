@@ -1,11 +1,8 @@
 ﻿using AutoMapper;
 using RhDomain.Dto;
-using RhDomain.Entities.Candidatos;
 using RhDomain.Interfaces.Repositories;
 using RhDomain.Interfaces.Services;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace RhDomain.Services.CandidatoServices
@@ -22,7 +19,7 @@ namespace RhDomain.Services.CandidatoServices
         }
         public async Task<List<CandidatoDto>> ObterListaCandidatos()
         {
-            var listaCandidatos = await _candidatoRepository.BuscarLista();
+            var listaCandidatos = await _candidatoRepository.BuscarListaCandidatosComVagaDescricao();
             var listaCandidatosDto = _mapper.Map<List<CandidatoDto>>(listaCandidatos);
             return listaCandidatosDto;
         }
@@ -33,6 +30,22 @@ namespace RhDomain.Services.CandidatoServices
             var candidatoDto = _mapper.Map<CandidatoDto>(candidato);
             return candidatoDto;
         }
+
+        public CandidatoComTecnologiaDto ObterCandidatoComTecnologia(int id)
+        {
+            var candidato = _candidatoRepository.BuscaCandidatoTecnologiaComTecnologias(id);
+            var candidatoDto =  _mapper.Map<CandidatoComTecnologiaDto>(candidato);
+            return candidatoDto;
+        }
+
+        public CandidatoComTecnologiaParaArmazenarDto BuscarParaArmazenarCandidatoTecnologia(
+            CandidatoComTecnologiaParaArmazenarDto candidatoComTecnologiaParaArmazenarDto)
+        {
+            var candidato = _candidatoRepository.BuscarParaArmazenarCandidatoTecnologia(candidatoComTecnologiaParaArmazenarDto);
+            var candidatoDto = _mapper.Map<CandidatoComTecnologiaParaArmazenarDto>(candidato);
+            return candidatoDto;
+        }
+
 
 
     }
