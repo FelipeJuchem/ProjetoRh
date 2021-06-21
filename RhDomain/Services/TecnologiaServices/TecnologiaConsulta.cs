@@ -23,6 +23,10 @@ namespace RhDomain.Services.TecnologiaServices
         public async Task<List<TecnologiaDto>> ObterListaDeTecnologias()
         {
             var listaTecnologias = await _tecnologiaRepository.BuscarLista();
+            if(listaTecnologias.Count == 0)
+            {
+                throw new Exception("Não existem Tecnologias Cadastradas");
+            }
             var listaTecnologiasDto = _mapper.Map<List<TecnologiaDto>>(listaTecnologias);
             return listaTecnologiasDto;
         }

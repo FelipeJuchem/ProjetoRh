@@ -37,13 +37,29 @@ namespace RhAPI.Controllers.CandidatosController
         [HttpGet]
         public async Task<ActionResult<List<CandidatoDto>>> Get()
         {
-            return await _candidatoConsulta.ObterListaCandidatos();
+            try
+            {
+                return await _candidatoConsulta.ObterListaCandidatos();
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+           
         }
 
         [HttpGet("{id}")]
         public ActionResult<CandidatoDto> GetById(int id)
         {
-            return _candidatoConsulta.ObterPorId(id);
+            try
+            {
+                return _candidatoConsulta.ObterPorId(id);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+           
         }
 
         [HttpPost]

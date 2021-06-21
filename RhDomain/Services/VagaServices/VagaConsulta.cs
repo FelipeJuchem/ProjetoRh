@@ -54,11 +54,11 @@ namespace RhDomain.Services.VagaServices
             var vaga = _vagaRepository.BuscaVagaComInclude(id);
             _mapper.Map<List<CandidatoComTecnologiaDto>>(vaga.Candidatos);
             var vagaDto = _mapper.Map<VagaComCandidatoDtoSorteado>(vaga);
-            foreach(var candidatos in vagaDto.Candidatos)
+            foreach(var candidatoDto in vagaDto.Candidatos)
             {
-                foreach(var tecnologia in candidatos.Tecnologias)
+                foreach(var tecnologia in candidatoDto.Tecnologias)
                 {
-                    candidatos.Pontuacao += tecnologia.Peso;
+                    candidatoDto.Pontuacao += tecnologia.Peso;
                 }
             }
             var candidatosSorteados = vagaDto.Candidatos.OrderByDescending(x => x.Pontuacao).ToList();

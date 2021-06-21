@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RhDomain.Dto;
 using RhDomain.Interfaces.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -34,7 +35,15 @@ namespace RhAPI.Controllers.TecnologiaController
         [HttpGet]
         public async Task<ActionResult<List<TecnologiaDto>>> Get()
         {
-            return await _tecnologiaConsulta.ObterListaDeTecnologias();
+            try
+            {
+                return await _tecnologiaConsulta.ObterListaDeTecnologias();
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            
         }
 
         [HttpGet("{id}")]

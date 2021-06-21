@@ -2,6 +2,7 @@
 using RhDomain.Dto;
 using RhDomain.Interfaces.Repositories;
 using RhDomain.Interfaces.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -21,6 +22,10 @@ namespace RhDomain.Services.CandidatoServices
         public async Task<List<CandidatoDto>> ObterListaCandidatos()
         {
             var listaCandidatos = await _candidatoRepository.BuscarListaCandidatosComVagaDescricao();
+            if(listaCandidatos.Count == 0)
+            {
+                throw new Exception("Não existe nenhum candidato cadastrado!");
+            }
             var listaCandidatosDto = _mapper.Map<List<CandidatoDto>>(listaCandidatos);
             return listaCandidatosDto;
         }
@@ -28,6 +33,10 @@ namespace RhDomain.Services.CandidatoServices
         public CandidatoDto ObterPorId(int id)
         {
             var candidato = _candidatoRepository.BuscarPorId(id);
+            if(candidato == null)
+            {
+                throw new Exception("Candidato não existe!");
+            }
             var candidatoDto = _mapper.Map<CandidatoDto>(candidato);
             return candidatoDto;
         }
