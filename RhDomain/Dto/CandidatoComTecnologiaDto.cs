@@ -12,6 +12,7 @@ namespace RhDomain.Dto
         public double Idade { get; set; }
         public string Cpf { get; set; }
         public int VagaId { get; set; }
+        public int Pontuacao { get; set; }
         public List<TecnologiaDto> Tecnologias { get; set; }
 
     }

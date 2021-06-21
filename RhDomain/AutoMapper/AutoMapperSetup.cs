@@ -29,11 +29,17 @@ namespace RhDomain.AutoMapper
 
 
             CreateMap<Candidato, CandidatoComTecnologiaDto>()
+                .ForMember(x => x.Pontuacao, y => y.Ignore())
                 .ForMember(x => x.Tecnologias, y => y.MapFrom(t => t.CandidatosTecnologias
                 .Select(o => new TecnologiaDto()
                 { Descricao = o.Tecnologia.Descricao, Id = o.Tecnologia.Id, Peso = o.Peso })));
-                
-                
+
+            CreateMap<Vaga, VagaComCandidatoDtoSorteado>()
+                .ForMember(x => x.Tecnologias, y => y.MapFrom(t => t.VagasTecnologias
+                .Select(o => new TecnologiaDto()
+                { Descricao = o.Tecnologia.Descricao, Id = o.Tecnologia.Id, Peso = o.Peso })))
+                .ForMember(x => x.Candidatos, y => y.MapFrom(t => t.Candidatos));
+
             CreateMap<Vaga, VagaComTecnologiaECandidatosDto>()
                 .ForMember(x => x.Tecnologias, y => y.MapFrom(t => t.VagasTecnologias
                 .Select(o => new TecnologiaDto()

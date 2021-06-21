@@ -3,6 +3,7 @@ using RhDomain.Dto;
 using RhDomain.Interfaces.Repositories;
 using RhDomain.Interfaces.Services;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace RhDomain.Services.CandidatoServices
@@ -35,6 +36,8 @@ namespace RhDomain.Services.CandidatoServices
         {
             var candidato = _candidatoRepository.BuscaCandidatoTecnologiaComTecnologias(id);
             var candidatoDto =  _mapper.Map<CandidatoComTecnologiaDto>(candidato);
+            var candidatosSorteadosPorPesoDasTecnologias = candidatoDto.Tecnologias.OrderBy(x => x.Peso).ToList();
+            candidatoDto.Tecnologias = candidatosSorteadosPorPesoDasTecnologias;
             return candidatoDto;
         }
 

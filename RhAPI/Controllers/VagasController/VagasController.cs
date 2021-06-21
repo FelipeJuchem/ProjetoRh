@@ -51,6 +51,12 @@ namespace RhAPI.Controllers.VagasController
             return _vagaConsulta.ObterVagaComTecnologiaPorId(id);
         }
 
+        [HttpGet("GetVagasComCandidatosSorteados/{id}")]
+        public ActionResult<VagaComCandidatoDtoSorteado> GetVagaComCandidatoSorteado(int id)
+        {
+            return _vagaConsulta.ObterVagaComCandidatoSorteadoPorId(id);
+        }
+
         [HttpPut]
         public ActionResult<VagaComTecnologiaECandidatosDto> Put(VagaComTecnologiaECandidatosDto vagaDto)
         {

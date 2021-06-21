@@ -12,6 +12,7 @@ namespace RhDomain.Interfaces.Services
     {
         Task<List<VagaComTecnologiaECandidatosDto>> ObterListaDeVagas();
         VagaComTecnologiaECandidatosDto ObterVagaComTecnologiaPorId(int id);
+        public VagaComCandidatoDtoSorteado ObterVagaComCandidatoSorteadoPorId(int id);
 
     }
 }
