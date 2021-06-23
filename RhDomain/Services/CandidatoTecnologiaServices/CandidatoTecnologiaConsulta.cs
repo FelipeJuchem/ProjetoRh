@@ -28,7 +28,7 @@ namespace RhDomain.Services.CandidatoTecnologiaServices
 
         public CandidatoTecnologiaDto BuscarPorIdDuplo(int candidatoId, int TecnologiaId)
         {
-            var candidatoTecnologia = _candidatoTecnologiaRepository.BuscarCandidatoTecnologiaporDupoloId(candidatoId, TecnologiaId);
+            var candidatoTecnologia = _candidatoTecnologiaRepository.BuscarCandidatoTecnologiaporDuploId(candidatoId, TecnologiaId);
             var candidatoTecnologiaDto = _mapper.Map<CandidatoTecnologiaDto>(candidatoTecnologia);
             return candidatoTecnologiaDto;
         }

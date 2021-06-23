@@ -22,7 +22,7 @@ namespace RhDomain.Services.CandidatoTecnologiaServices
 
         public void Deletar(int candidatoId, int tecnologiaId)
         {
-            var candidatoTecnologia = _candidatoTecnologiaRepository.BuscarCandidatoTecnologiaporDupoloId(candidatoId, tecnologiaId);
+            var candidatoTecnologia = _candidatoTecnologiaRepository.BuscarCandidatoTecnologiaporDuploId(candidatoId, tecnologiaId);
             _candidatoTecnologiaRepository.Excluir(candidatoTecnologia);
             _uow.Commit();
         }

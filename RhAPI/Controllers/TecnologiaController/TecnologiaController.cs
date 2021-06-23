@@ -53,9 +53,16 @@ namespace RhAPI.Controllers.TecnologiaController
         }
 
         [HttpDelete("{id}")]
-        public void Excluir(int id)
+        public ActionResult Excluir(int id)
         {
-            _tecnologiaExcluidor.ExcluirTecnologia(id);
+            try
+            {
+                _tecnologiaExcluidor.ExcluirTecnologia(id);
+            }catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            return Ok();
         }
 
         [HttpPut]

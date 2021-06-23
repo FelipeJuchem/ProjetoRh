@@ -4,8 +4,8 @@ using System.Text;
 
 namespace RhDomain.Interfaces.Services
 {
-    public interface ITecnologiaExcluidor
+    public interface IPermitirExclusaoTecnologia
     {
-        bool ExcluirTecnologia(int id);
+        bool ValidaExclusaoTecnologia(int tecnologiaId);
     }
 }

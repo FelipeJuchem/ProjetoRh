@@ -17,9 +17,14 @@ namespace RhData.Repositories
             _dataContext = dataContext;
         }
 
-        public CandidatoTecnologia BuscarCandidatoTecnologiaporDupoloId(int candidatoId, int tecnologiaId)
+        public CandidatoTecnologia BuscarCandidatoTecnologiaporDuploId(int candidatoId, int tecnologiaId)
         {
             return _dataContext.Set<CandidatoTecnologia>().Find(candidatoId, tecnologiaId);
+        }
+
+        public CandidatoTecnologia BuscarCandidatoTecnologiaPorTecnologiaId(int tecnologiaId)
+        {
+            return _dataContext.Set<CandidatoTecnologia>().FirstOrDefault(x => x.TecnologiaId == tecnologiaId);
         }
     }
 }

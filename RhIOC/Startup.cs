@@ -58,6 +58,7 @@ namespace RhIOC
             services.AddScoped(typeof(ICandidatoTecnologiaExcluidor), typeof(CandidatoTecnologiaExcluidor));
             services.AddScoped(typeof(ICandidatoTecnologiaValidations), typeof(CandidatoTecnologiaValidations));
             services.AddScoped(typeof(IPermitirExclusaoDeVagaTecnologia), typeof(PermitirExclusaoDeVagaTecnologia));
+            services.AddScoped(typeof(IPermitirExclusaoTecnologia), typeof(PermitirExclusaoTecnologia));
         }
     }
     
