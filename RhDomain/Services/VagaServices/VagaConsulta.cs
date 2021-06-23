@@ -34,19 +34,6 @@ namespace RhDomain.Services.VagaServices
         {
             var vaga = _vagaRepository.BuscaVagaComInclude(id);
             return  _mapper.Map<VagaComTecnologiaECandidatosDto>(vaga);
-            
-
-            //List<TecnologiaDto> tecnologiasDto = new List<TecnologiaDto>();
-            //foreach(VagaTecnologia vagaTecnnologia in vaga.VagasTecnologias)
-            //{
-            //    tecnologiasDto.Add(TecnologiaDto.DeVagaTecnologia(vagaTecnnologia));
-            //}
-
-            //vagaDto.Tecnologias = tecnologiasDto;
-            //return vagaDto;
-
-            //var vaga = _vagaRepository.BuscarPorId(id);
-            //return  _mapper.Map<VagaDto>(vaga);
         }
 
         public VagaComCandidatoDtoSorteado ObterVagaComCandidatoSorteadoPorId(int id)
@@ -71,9 +58,5 @@ namespace RhDomain.Services.VagaServices
             var vaga = _vagaRepository.BuscarPorId(id);
             return _mapper.Map<VagaDto>(vaga);
         }
-
-        
-
-
     }
 }

@@ -26,9 +26,18 @@ namespace RhAPI.Controllers.CandidatoTecnologiaController
         }
 
         [HttpPost]
-        public ActionResult<CandidatoTecnologiaDto> Post([FromBody] CandidatoTecnologiaDto candidatoTecnologiaDto)
+        public async Task<ActionResult<CandidatoTecnologiaDto>> Post([FromBody] CandidatoTecnologiaDto candidatoTecnologiaDto)
         {
-            return _candidatoTecnologiaArmazenador.IncluirCandidatoTecnologia(candidatoTecnologiaDto);
+            try
+            {
+                return await _candidatoTecnologiaArmazenador.IncluirCandidatoTecnologia(candidatoTecnologiaDto);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+           
         }
 
         [HttpGet]

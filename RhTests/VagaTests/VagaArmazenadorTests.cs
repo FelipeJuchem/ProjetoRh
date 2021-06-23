@@ -49,9 +49,9 @@ namespace RhTests.VagaTests
                 Descricao = "Teste"
             };
 
-            var resultado = _vagaArmazenador.IncluirVaga(vagaDto);
+            var resultado = Assert.Throws<Exception>(()=> _vagaArmazenador.IncluirVaga(vagaDto));
 
-            Assert.Null(resultado);
+            Assert.Equal("Vaga não esta preenchida", resultado.Message);
         }
 
 

@@ -55,9 +55,9 @@ namespace RhTests
                 Cpf = "55,55,11,44"
             };
 
-            var resultado = _candidatoArmazenador.IncluirCandidato(candidatoDto);
+            var resultado = Assert.Throws<Exception>(()=> _candidatoArmazenador.IncluirCandidato(candidatoDto));
 
-            Assert.Null(resultado);
+            Assert.Equal("Candidato está vazio!", resultado.Message);
         }
 
         public void CriaSetupComCandidatoInvalido()

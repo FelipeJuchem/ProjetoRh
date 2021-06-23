@@ -30,7 +30,7 @@ namespace RhTests.VagaTecnologiaTests
         public void DeveExcluirVagaTecnologia()
         {
             var vagaTecnologia = new VagaTecnologia(1, 1, 20);
-            _vagaTecnologiaRepository.Setup(x => x.BuscaVagaTecnologiaPorIdDuplo(1, 1)).Returns(vagaTecnologia);
+            _vagaTecnologiaRepository.Setup(x => x.BuscaVagaTecnologiaPorIdDuplo(1, 1)).ReturnsAsync(vagaTecnologia);
             _permitirExclusaoDeVagaTecnologia.Setup(x => x.ValidaExclusaoDeVagaTecnologia(1, 1)).Returns(true);
             _vagaTecnologiaExcluidor.Deletar(vagaTecnologia.VagaId, vagaTecnologia.TecnologiaId);
             _vagaTecnologiaRepository.Verify(x => x.Excluir(vagaTecnologia));

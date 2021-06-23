@@ -32,7 +32,7 @@ namespace RhDomain.Services.VagaServices
                 _uow.Commit();
                 return vagaDto;
             }
-            return null;
+            throw new Exception("Descrição deve estar preenchido!");
         }
     }
 }

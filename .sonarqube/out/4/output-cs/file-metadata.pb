@@ -1,0 +1,11 @@
+g
+^C:\Projetos\ProjetoRH\RhProject\RhAPI\Controllers\CandidatosController\CandidatosController.csutf-8y
+pC:\Projetos\ProjetoRH\RhProject\RhAPI\Controllers\CandidatoTecnologiaController\CandidatoTecnologiaController.csutf-8g
+^C:\Projetos\ProjetoRH\RhProject\RhAPI\Controllers\TecnologiaController\TecnologiaController.csutf-8]
+TC:\Projetos\ProjetoRH\RhProject\RhAPI\Controllers\VagasController\VagasController.csutf-8o
+fC:\Projetos\ProjetoRH\RhProject\RhAPI\Controllers\VagaTecnologiaController\VagaTecnologiaController.csutf-89
+0C:\Projetos\ProjetoRH\RhProject\RhAPI\Program.csutf-89
+0C:\Projetos\ProjetoRH\RhProject\RhAPI\Startup.csutf-8p
+eC:\Projetos\ProjetoRH\RhProject\RhAPI\obj\Debug\net5.0\.NETCoreApp,Version=v5.0.AssemblyAttributes.csutf-8W
+LC:\Projetos\ProjetoRH\RhProject\RhAPI\obj\Debug\net5.0\RhAPI.AssemblyInfo.csutf-8j
+_C:\Projetos\ProjetoRH\RhProject\RhAPI\obj\Debug\net5.0\RhAPI.MvcApplicationPartsAssemblyInfo.csutf-8

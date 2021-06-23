@@ -1,0 +1,16 @@
+>
+5C:\Projetos\ProjetoRH\RhProject\RhData\DataContext.csutf-8Z
+QC:\Projetos\ProjetoRH\RhProject\RhData\Migrations\20210611155314_initialCreate.csutf-8e
+ZC:\Projetos\ProjetoRH\RhProject\RhData\Migrations\20210611155314_initialCreate.Designer.csutf-8T
+KC:\Projetos\ProjetoRH\RhProject\RhData\Migrations\20210615143359_PesoAdd.csutf-8_
+TC:\Projetos\ProjetoRH\RhProject\RhData\Migrations\20210615143359_PesoAdd.Designer.csutf-8X
+MC:\Projetos\ProjetoRH\RhProject\RhData\Migrations\DataContextModelSnapshot.csutf-8S
+JC:\Projetos\ProjetoRH\RhProject\RhData\Repositories\CandidatoRepository.csutf-8]
+TC:\Projetos\ProjetoRH\RhProject\RhData\Repositories\CandidatoTecnologiaRepository.csutf-8T
+KC:\Projetos\ProjetoRH\RhProject\RhData\Repositories\TecnologiaRepository.csutf-8N
+EC:\Projetos\ProjetoRH\RhProject\RhData\Repositories\VagaRepository.csutf-8X
+OC:\Projetos\ProjetoRH\RhProject\RhData\Repositories\VagaTecnologiaRepository.csutf-8=
+4C:\Projetos\ProjetoRH\RhProject\RhData\Repository.csutf-8=
+4C:\Projetos\ProjetoRH\RhProject\RhData\UnitOfWork.csutf-8x
+mC:\Projetos\ProjetoRH\RhProject\RhData\obj\Debug\netcoreapp3.1\.NETCoreApp,Version=v3.1.AssemblyAttributes.csutf-8`
+UC:\Projetos\ProjetoRH\RhProject\RhData\obj\Debug\netcoreapp3.1\RhData.AssemblyInfo.csutf-8

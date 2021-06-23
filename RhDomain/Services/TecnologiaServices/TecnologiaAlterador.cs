@@ -21,11 +21,16 @@ namespace RhDomain.Services.TecnologiaServices
        
         public TecnologiaDto Alterar(TecnologiaDto tecnologiaDto)
         {
-            var tecnologia = _tecnologiaRepository.BuscarPorId(tecnologiaDto.Id);
-            tecnologia.AtualizarDescricao(tecnologiaDto.Descricao);
-            _tecnologiaRepository.Alterador(tecnologia);
-            _uow.Commit();
-            return tecnologiaDto;
+            if(tecnologiaDto.Descricao != string.Empty)
+            {
+                var tecnologia = _tecnologiaRepository.BuscarPorId(tecnologiaDto.Id);
+                tecnologia.AtualizarDescricao(tecnologiaDto.Descricao);
+                _tecnologiaRepository.Alterador(tecnologia);
+                _uow.Commit();
+                return tecnologiaDto;
+            }
+            throw new Exception("Descrição não pode estar vazia!");
+            
         }
     }
 }

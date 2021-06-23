@@ -56,9 +56,5 @@ namespace RhData
                 }
             }
         }
-
-        public void Dispose()
-        {
-        }
     }
 }

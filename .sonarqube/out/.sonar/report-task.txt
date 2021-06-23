@@ -1,0 +1,6 @@
+projectKey=ProjetoRh
+serverUrl=http://localhost:9000
+serverVersion=8.9.1.44547
+dashboardUrl=http://localhost:9000/dashboard?id=ProjetoRh
+ceTaskId=AXo6YXOELFew0sb3jbVE
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXo6YXOELFew0sb3jbVE

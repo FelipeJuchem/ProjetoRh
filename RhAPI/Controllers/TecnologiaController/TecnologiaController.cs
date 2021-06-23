@@ -29,7 +29,15 @@ namespace RhAPI.Controllers.TecnologiaController
         [HttpPost]
         public ActionResult<TecnologiaDto> Post([FromBody] TecnologiaDto tecnologiaDto)
         {
-            return _tecnologiaArmazenador.IncluirTecnologia(tecnologiaDto);
+            try
+            {
+                return _tecnologiaArmazenador.IncluirTecnologia(tecnologiaDto);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            
         }
 
         [HttpGet]
@@ -68,7 +76,15 @@ namespace RhAPI.Controllers.TecnologiaController
         [HttpPut]
         public ActionResult<TecnologiaDto> Put(TecnologiaDto tecnologiaDto)
         {
-            return _tecnologiaAlterador.Alterar(tecnologiaDto);
+            try
+            {
+                return _tecnologiaAlterador.Alterar(tecnologiaDto);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            
         }
 
     }

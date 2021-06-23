@@ -9,6 +9,7 @@ using RhDomain.Services.CandidatoTecnologiaServices;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace RhTests.CandidatoTecnologiaTests
@@ -47,7 +48,7 @@ namespace RhTests.CandidatoTecnologiaTests
             var vagaTecnologia = new VagaTecnologia(1, 1, 20);
             var candidatoTecnologia = new CandidatoTecnologia(1, 1, 20);
             _candidatoRepositoryMock.Setup(x => x.BuscarPorId(1)).Returns(candidato);
-            _vagaTecnologiaRepositoryMock.Setup(x => x.BuscaVagaTecnologiaPorIdDuplo(1, 1)).Returns(vagaTecnologia);
+            _vagaTecnologiaRepositoryMock.Setup(x => x.BuscaVagaTecnologiaPorIdDuplo(1, 1)).ReturnsAsync(vagaTecnologia);
             var resultado = _candidatoTecnologiaArmazenador.IncluirCandidatoTecnologia(candidatoTecnologiaDto);
 
 

@@ -30,7 +30,14 @@ namespace RhAPI.Controllers.VagasController
         [HttpPost]
         public ActionResult<VagaComTecnologiaECandidatosDto> Post([FromBody] VagaComTecnologiaECandidatosDto vagaDto)
         {
-            return _vagaArmazenador.IncluirVaga(vagaDto);
+            try
+            {
+                return _vagaArmazenador.IncluirVaga(vagaDto);
+            }catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+           
         }
 
         [HttpGet]
@@ -60,7 +67,15 @@ namespace RhAPI.Controllers.VagasController
         [HttpPut]
         public ActionResult<VagaComTecnologiaECandidatosDto> Put(VagaComTecnologiaECandidatosDto vagaDto)
         {
-            return _vagaAlterador.Alterar(vagaDto);
+            try
+            {
+                return _vagaAlterador.Alterar(vagaDto);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+           
         }
 
         [HttpDelete("{id}")]

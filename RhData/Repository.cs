@@ -24,19 +24,19 @@ namespace RhData
             _dbSet = _dataContext.Set<TEntity>();
         }
 
-        public void Armazenar(TEntity objeto)
+        public void Armazenar(TEntity obj)
         {
-            _dbSet.Add(objeto);
+            _dbSet.Add(obj);
         }
 
-        public void Excluir(TEntity objeto)
+        public void Excluir(TEntity obj)
         {
-            _dbSet.Remove(objeto);
+            _dbSet.Remove(obj);
         }
 
-        public TEntity BuscarPorId(TId id)
+        public TEntity BuscarPorId(TId Id)
         {
-            return _dbSet.Find(id);
+            return _dbSet.Find(Id);
         }
 
         public async Task<List<TEntity>> BuscarLista()
@@ -44,10 +44,10 @@ namespace RhData
             return await _dbSet.ToListAsync();
         }
 
-        public TEntity Alterador(TEntity objeto)
+        public TEntity Alterador(TEntity obj)
         {
-            _dbSet.Update(objeto);
-            return objeto;
+            _dbSet.Update(obj);
+            return obj;
         }
     }
 }

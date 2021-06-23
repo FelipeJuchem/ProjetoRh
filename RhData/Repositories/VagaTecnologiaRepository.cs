@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace RhData.Repositories
 {
@@ -15,9 +16,9 @@ namespace RhData.Repositories
             _dataContext = dataContext;
         }
 
-        public VagaTecnologia BuscaVagaTecnologiaPorIdDuplo(int vagaId, int tecnologiaId)
+        public async Task<VagaTecnologia> BuscaVagaTecnologiaPorIdDuplo(int vagaId, int tecnologiaId)
         {
-            return _dataContext.Set<VagaTecnologia>().Find(tecnologiaId, vagaId );
+            return await _dataContext.Set<VagaTecnologia>().FindAsync(tecnologiaId, vagaId );
         }
 
         public VagaTecnologia BuscaVagaTecnologiaPorTecnologiaId(int tecnologiaId)

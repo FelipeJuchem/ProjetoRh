@@ -46,7 +46,7 @@ namespace RhTests.VagaTests
             _mapperMock.Setup(x => x.Map<List<VagaComTecnologiaECandidatosDto>>(experado)).Returns(experadoDto);
             var listaDeVagas = await _vagaConsulta.ObterListaDeVagas();
 
-            Assert.Equal(listaDeVagas.Count, 2);
+            Assert.Equal(2, listaDeVagas.Count);
         }
     }
 }

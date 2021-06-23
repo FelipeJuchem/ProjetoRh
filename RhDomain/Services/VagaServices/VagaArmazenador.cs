@@ -34,7 +34,7 @@ namespace RhDomain.Services.VagaServices
                 _uow.Commit();
                 return vagaDto;
             }
-            return null;
+            throw new Exception("Vaga não esta preenchida");
         }
     }
 }

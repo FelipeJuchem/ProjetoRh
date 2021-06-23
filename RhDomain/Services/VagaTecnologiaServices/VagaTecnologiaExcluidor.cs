@@ -26,7 +26,7 @@ namespace RhDomain.Services.VagaTecnologiaServices
         {
             if(_permitirExclusaoDeVagaTecnologia.ValidaExclusaoDeVagaTecnologia(vagaId, tecnologiaId))
             {
-                var vagaTecnologia = _vagaTecnologiaRepository.BuscaVagaTecnologiaPorIdDuplo(vagaId, tecnologiaId);
+                var vagaTecnologia = await _vagaTecnologiaRepository.BuscaVagaTecnologiaPorIdDuplo(vagaId, tecnologiaId);
                 _vagaTecnologiaRepository.Excluir(vagaTecnologia);
                 _uow.Commit();
                 return true;

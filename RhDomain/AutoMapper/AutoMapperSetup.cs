@@ -52,15 +52,6 @@ namespace RhDomain.AutoMapper
             CreateMap<CandidatoTecnologia, CandidatoTecnologiaDto>()
                 .ForMember(x => x.Peso, y => y.MapFrom(o => o.Tecnologia.VagasTecnologias.FirstOrDefault().Peso));
 
-            
-                
-                
-            
-            //CreateMap<TecnologiaDto, VagaTecnologia>()
-            //    .ForMember(x => x.Tecnologia.Id, y => y.MapFrom(t => t.Id))
-            //    .ForMember(x => x.Tecnologia.Descricao, y => y.MapFrom(t => t.Descricao))
-            //    .ForMember(x => x.Peso, y => y.MapFrom(t => t.Peso));
-
         }
     }
 }

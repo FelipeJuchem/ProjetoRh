@@ -65,13 +65,28 @@ namespace RhAPI.Controllers.CandidatosController
         [HttpPost]
         public ActionResult<CandidatoDto> Post([FromBody] CandidatoDto candidatoDto)
         {
-            return _candidatoArmazenador.IncluirCandidato(candidatoDto);
+            try
+            {
+                return _candidatoArmazenador.IncluirCandidato(candidatoDto);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            
         }
 
         [HttpPut]
         public ActionResult<CandidatoDto> Put(CandidatoDto candidatoDto)
         {
-            return _candidatoAlterador.Alterar(candidatoDto);
+            try
+            {
+                return _candidatoAlterador.Alterar(candidatoDto);
+            }catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            
         }
 
         [HttpDelete("{id}")]

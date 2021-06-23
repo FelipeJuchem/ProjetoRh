@@ -41,7 +41,7 @@ namespace RhDomain.Services.CandidatoServices
                 _uow.Commit();
                 return candidatoDto;
             }
-            return null;
+            throw new Exception("Candidato está vazio!");
         }
 
         

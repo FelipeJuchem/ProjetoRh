@@ -7,6 +7,7 @@ using RhDomain.Interfaces.UnitOfWork;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace RhDomain.Services.CandidatoTecnologiaServices
 {
@@ -26,14 +27,18 @@ namespace RhDomain.Services.CandidatoTecnologiaServices
             _uow = uow;
         }
 
-        public CandidatoTecnologiaDto IncluirCandidatoTecnologia(CandidatoTecnologiaDto candidatoTecnologiaDto)
+        public async Task<CandidatoTecnologiaDto> IncluirCandidatoTecnologia(CandidatoTecnologiaDto candidatoTecnologiaDto)
         {
-            var candidato = _candidatoRepository.BuscarPorId(candidatoTecnologiaDto.CandidatoId);
-            var vagaTecnologia = _vagaTecnologiaRepository.BuscaVagaTecnologiaPorIdDuplo(candidato.VagaId, candidatoTecnologiaDto.TecnologiaId);
-            var candidatoTecnologia = new CandidatoTecnologia(candidatoTecnologiaDto.CandidatoId, candidatoTecnologiaDto.TecnologiaId, vagaTecnologia.Peso);
-            _candidatoTecnologiaRepository.Armazenar(candidatoTecnologia);
-            _uow.Commit();
-            return candidatoTecnologiaDto;
-        }
+            if (candidatoTecnologiaDto != null && candidatoTecnologiaDto.TecnologiaId != 0)
+            {
+                var candidato = _candidatoRepository.BuscarPorId(candidatoTecnologiaDto.CandidatoId);
+                var vagaTecnologia = await _vagaTecnologiaRepository.BuscaVagaTecnologiaPorIdDuplo(candidato.VagaId, candidatoTecnologiaDto.TecnologiaId);
+                var candidatoTecnologia = new CandidatoTecnologia(candidatoTecnologiaDto.CandidatoId, candidatoTecnologiaDto.TecnologiaId, vagaTecnologia.Peso);
+                _candidatoTecnologiaRepository.Armazenar(candidatoTecnologia);
+                _uow.Commit();
+                return candidatoTecnologiaDto;
+            }
+            throw new Exception("candidatoTecnologiaDto Nulo");
+        }   
     }
 }

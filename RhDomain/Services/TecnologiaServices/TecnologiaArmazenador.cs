@@ -36,7 +36,7 @@ namespace RhDomain.Services.TecnologiaServices
                 _uow.Commit();
                 return tecnologiaDto;
             }
-            return null;
+            throw new Exception("Tecnologia esta vazia!");
         }
     }
 }

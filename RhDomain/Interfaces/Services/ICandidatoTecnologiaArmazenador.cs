@@ -2,11 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace RhDomain.Interfaces.Services
 {
     public interface ICandidatoTecnologiaArmazenador
     {
-        CandidatoTecnologiaDto IncluirCandidatoTecnologia(CandidatoTecnologiaDto candidatoTecnologiaDto);
+        Task<CandidatoTecnologiaDto> IncluirCandidatoTecnologia(CandidatoTecnologiaDto candidatoTecnologiaDto);
     }
 }

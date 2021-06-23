@@ -17,7 +17,7 @@ namespace RhDomain.Entities.Candidatos
         public string Cpf { get; private set; }
         public int VagaId { get; private set; }
         public Vaga Vaga { get; private set; }
-        public IList<CandidatoTecnologia> CandidatosTecnologias { get; private set; }
+        public IList<CandidatoTecnologia> CandidatosTecnologias { get;  set; }
 
         public Candidato()
         {

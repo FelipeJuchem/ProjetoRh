@@ -47,9 +47,9 @@ namespace RhTests.TecnologiaTests
             {
                 Descricao = "Teste"
             };
-            var resultado = _tecnologiaArmazenador.IncluirTecnologia(tecnologiaDto);
+            var resultado = Assert.Throws<Exception>(()=> _tecnologiaArmazenador.IncluirTecnologia(tecnologiaDto));
 
-            Assert.Null(resultado);
+            Assert.Equal("Tecnologia esta vazia!", resultado.Message);
         }
 
 
