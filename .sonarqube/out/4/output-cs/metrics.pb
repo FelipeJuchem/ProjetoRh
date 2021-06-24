@@ -9,5 +9,5 @@ TC:\Projetos\ProjetoRH\RhProject\RhAPI\Controllers\VagasController\VagasControll
 fC:\Projetos\ProjetoRH\RhProject\RhAPI\Controllers\VagaTecnologiaController\VagaTecnologiaController.cs 8r;	 !"#$&'()*,-./023456789:;<=>?@ABCDx‚#)/78:<@[
 0C:\Projetos\ProjetoRH\RhProject\RhAPI\Program.cs 8r
 ‚ 
-0C:\Projetos\ProjetoRH\RhProject\RhAPI\Startup.cs 8j0rC	
- !"%&(*+,-.1245689:;<=>?ABCDEFHJLNOPQRSTx‚%&(*,4689:<=ACDEHJLNP
+0C:\Projetos\ProjetoRH\RhProject\RhAPI\Startup.cs 8j3rC	
+ !"#$%()+-./0145789;<=>?@ABDEFGHIKMOQRSTUVWx‚!()+-/79;<=?@DFGHKMOQS

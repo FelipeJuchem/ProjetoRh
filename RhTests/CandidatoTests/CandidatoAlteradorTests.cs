@@ -52,7 +52,7 @@ namespace RhTests.CandidatoTests
             Assert.Equal(candidatoDto.VagaId, candidato.VagaId);
         }
 
-        public void CriaSetupComCandidatoValido()
+        private void CriaSetupComCandidatoValido()
         {
             _candidatoValidationMock.Setup(x => x.validar(It.IsAny<CandidatoDto>())).Returns(true);
         }

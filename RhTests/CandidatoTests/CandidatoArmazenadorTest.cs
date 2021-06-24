@@ -60,12 +60,12 @@ namespace RhTests
             Assert.Equal("Candidato está vazio!", resultado.Message);
         }
 
-        public void CriaSetupComCandidatoInvalido()
+        private void CriaSetupComCandidatoInvalido()
         {
             _candidatoValidationMock.Setup(x => x.validar(It.IsAny<CandidatoDto>())).Returns(false);
         }
 
-        public void CriaSetupComCandidatoValido()
+        private void CriaSetupComCandidatoValido()
         {
             _candidatoValidationMock.Setup(x => x.validar(It.IsAny<CandidatoDto>())).Returns(true);
         }

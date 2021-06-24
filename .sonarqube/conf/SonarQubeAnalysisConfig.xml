@@ -101,8 +101,8 @@
     <Property Name="sonar.auth.gitlab.url">https://gitlab.com</Property>
     <Property Name="sonaranalyzer-vbnet.pluginKey">vbnet</Property>
     <Property Name="sonar.updatecenter.url">https://update.sonarsource.org/update-center.properties</Property>
-    <Property Name="sonar.core.startTime">23/06/2021 10:20:21</Property>
     <Property Name="sonar.core.id">243B8A4D-AXo5B2-FLFew0sb3jWZ4</Property>
+    <Property Name="sonar.core.startTime">24/06/2021 08:12:34</Property>
     <Property Name="sonar.cs.opencover.it.reportsPaths">**/coverage.opencover.xml</Property>
     <Property Name="sonar.coverage.exclusions">RhData/**,RhAPI/**,RhIOC/**,RhDomain/**/*Consulta.cs,RhDomain/**/*Dto.cs,RhDomain/Dto/VagaComCandidatoDtoSorteado.cs,RhDomain/Utils/CommandResponse.cs,RhDomain/AutoMapper/AutoMapperSetup.cs,RhDomain/Entities/**</Property>
   </ServerSettings>

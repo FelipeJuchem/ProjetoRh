@@ -55,6 +55,22 @@ namespace RhTests.CandidatoTecnologiaTests
             Assert.NotNull(resultado);
         }
 
+        [Fact]
+        public void DeveRetonarExceptionComCandidatoTecnologiaInvalido()
+        {
+            var candidatoTecnologiaDto = new CandidatoTecnologiaDto
+            {
+                CandidatoId = 0,
+                TecnologiaId = 0,
+                Peso = 0
+            };
+
+            var resultado = Assert.ThrowsAsync<Exception>(() => _candidatoTecnologiaArmazenador.IncluirCandidatoTecnologia(candidatoTecnologiaDto));
+
+            Assert.Equal("candidatoTecnologiaDto Nulo", resultado.Result.Message);
+                
+        }
+
 
     }
 }

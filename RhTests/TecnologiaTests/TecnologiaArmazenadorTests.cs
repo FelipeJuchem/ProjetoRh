@@ -53,12 +53,12 @@ namespace RhTests.TecnologiaTests
         }
 
 
-        public void CriaSetupComTecnologiaValida()
+        private void CriaSetupComTecnologiaValida()
         {
             _tecnologiaValidationMock.Setup(x => x.ValidaSeTecnologiaEstaPreenchido(It.IsAny<TecnologiaDto>())).Returns(true);
         }
 
-        public void CriaSetupComTecnologiaInvalida()
+        private void CriaSetupComTecnologiaInvalida()
         {
             _tecnologiaValidationMock.Setup(x => x.ValidaSeTecnologiaEstaPreenchido(It.IsAny<TecnologiaDto>())).Returns(false);
         }

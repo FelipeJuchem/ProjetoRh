@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CoverageSession>
-  <Summary numSequencePoints="542" visitedSequencePoints="352" numBranchPoints="64" visitedBranchPoints="42" sequenceCoverage="64.94" branchCoverage="65.62" maxCyclomaticComplexity="176" minCyclomaticComplexity="176" visitedClasses="32" numClasses="46" visitedMethods="80" numMethods="136" />
+  <Summary numSequencePoints="542" visitedSequencePoints="356" numBranchPoints="64" visitedBranchPoints="45" sequenceCoverage="65.68" branchCoverage="70.31" maxCyclomaticComplexity="176" minCyclomaticComplexity="176" visitedClasses="32" numClasses="46" visitedMethods="81" numMethods="136" />
   <Modules>
-    <Module hash="052C12A1-945A-42EF-88DB-C865B1897973">
+    <Module hash="E0B92E05-C0C3-4EB6-ADC1-0F6A8DB5379A">
       <ModulePath>RhDomain.dll</ModulePath>
-      <ModuleTime>2021-06-23T07:38:14</ModuleTime>
+      <ModuleTime>2021-06-24T12:35:26</ModuleTime>
       <ModuleName>RhDomain</ModuleName>
       <Files>
         <File uid="1" fullPath="C:\Projetos\ProjetoRH\RhProject\RhDomain\Utils\CommandResponse.cs" />
@@ -313,31 +313,31 @@
           </Methods>
         </Class>
         <Class>
-          <Summary numSequencePoints="16" visitedSequencePoints="15" numBranchPoints="2" visitedBranchPoints="1" sequenceCoverage="93.75" branchCoverage="50" maxCyclomaticComplexity="2" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="2" numMethods="2" />
+          <Summary numSequencePoints="16" visitedSequencePoints="16" numBranchPoints="2" visitedBranchPoints="2" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="2" numMethods="2" />
           <FullName>RhDomain.Services.VagaServices.VagaAlterador</FullName>
           <Methods>
-            <Method cyclomaticComplexity="2" nPathComplexity="0" sequenceCoverage="90" branchCoverage="50" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
-              <Summary numSequencePoints="10" visitedSequencePoints="9" numBranchPoints="2" visitedBranchPoints="1" sequenceCoverage="90" branchCoverage="50" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+            <Method cyclomaticComplexity="2" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="10" visitedSequencePoints="10" numBranchPoints="2" visitedBranchPoints="2" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
               <MetadataToken />
               <Name>RhDomain.Dto.VagaComTecnologiaECandidatosDto RhDomain.Services.VagaServices.VagaAlterador::Alterar(RhDomain.Dto.VagaComTecnologiaECandidatosDto)</Name>
               <FileRef uid="7" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="26" ordinal="0" sl="26" sc="1" el="26" ec="2" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="1" uspid="27" ordinal="1" sl="27" sc="1" el="27" ec="2" bec="2" bev="1" fileid="7" />
+                <SequencePoint vc="2" uspid="26" ordinal="0" sl="26" sc="1" el="26" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="2" uspid="27" ordinal="1" sl="27" sc="1" el="27" ec="2" bec="2" bev="2" fileid="7" />
                 <SequencePoint vc="1" uspid="28" ordinal="2" sl="28" sc="1" el="28" ec="2" bec="0" bev="0" fileid="7" />
                 <SequencePoint vc="1" uspid="29" ordinal="3" sl="29" sc="1" el="29" ec="2" bec="0" bev="0" fileid="7" />
                 <SequencePoint vc="1" uspid="30" ordinal="4" sl="30" sc="1" el="30" ec="2" bec="0" bev="0" fileid="7" />
                 <SequencePoint vc="1" uspid="31" ordinal="5" sl="31" sc="1" el="31" ec="2" bec="0" bev="0" fileid="7" />
                 <SequencePoint vc="1" uspid="32" ordinal="6" sl="32" sc="1" el="32" ec="2" bec="0" bev="0" fileid="7" />
                 <SequencePoint vc="1" uspid="33" ordinal="7" sl="33" sc="1" el="33" ec="2" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="0" uspid="35" ordinal="8" sl="35" sc="1" el="35" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="1" uspid="35" ordinal="8" sl="35" sc="1" el="35" ec="2" bec="0" bev="0" fileid="7" />
                 <SequencePoint vc="1" uspid="36" ordinal="9" sl="36" sc="1" el="36" ec="2" bec="0" bev="0" fileid="7" />
               </SequencePoints>
               <BranchPoints>
                 <BranchPoint vc="1" uspid="27" ordinal="0" path="0" offset="15" offsetend="17" sl="27" fileid="7" />
-                <BranchPoint vc="0" uspid="27" ordinal="1" path="1" offset="15" offsetend="78" sl="27" fileid="7" />
+                <BranchPoint vc="1" uspid="27" ordinal="1" path="1" offset="15" offsetend="78" sl="27" fileid="7" />
               </BranchPoints>
-              <MethodPoint vc="9" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="26" ec="1" el="36" bec="0" bev="0" fileid="7" xmlns:p8="xsi" />
+              <MethodPoint vc="10" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="26" ec="1" el="36" bec="0" bev="0" fileid="7" xmlns:p8="xsi" />
             </Method>
             <Method cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="True" isGetter="False" isSetter="False" isStatic="True">
               <Summary numSequencePoints="6" visitedSequencePoints="6" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
@@ -345,12 +345,12 @@
               <Name>System.Void RhDomain.Services.VagaServices.VagaAlterador::.ctor(RhDomain.Interfaces.Repositories.IVagaRepository,RhDomain.Interfaces.UnitOfWork.IUnitOfWork,RhDomain.Interfaces.Services.VagaValidationInterface.IVagaValidation)</Name>
               <FileRef uid="7" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="18" ordinal="0" sl="18" sc="1" el="18" ec="2" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="1" uspid="19" ordinal="1" sl="19" sc="1" el="19" ec="2" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="1" uspid="20" ordinal="2" sl="20" sc="1" el="20" ec="2" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="1" uspid="21" ordinal="3" sl="21" sc="1" el="21" ec="2" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="1" uspid="22" ordinal="4" sl="22" sc="1" el="22" ec="2" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="1" uspid="23" ordinal="5" sl="23" sc="1" el="23" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="2" uspid="18" ordinal="0" sl="18" sc="1" el="18" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="2" uspid="19" ordinal="1" sl="19" sc="1" el="19" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="2" uspid="20" ordinal="2" sl="20" sc="1" el="20" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="2" uspid="21" ordinal="3" sl="21" sc="1" el="21" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="2" uspid="22" ordinal="4" sl="22" sc="1" el="22" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="2" uspid="23" ordinal="5" sl="23" sc="1" el="23" ec="2" bec="0" bev="0" fileid="7" />
               </SequencePoints>
               <BranchPoints />
               <MethodPoint vc="6" uspid="0" p8:type="SequencePoint" ordinal="1" offset="1" sc="0" sl="18" ec="1" el="23" bec="0" bev="0" fileid="7" xmlns:p8="xsi" />
@@ -617,31 +617,31 @@
           </Methods>
         </Class>
         <Class>
-          <Summary numSequencePoints="15" visitedSequencePoints="14" numBranchPoints="2" visitedBranchPoints="1" sequenceCoverage="93.33" branchCoverage="50" maxCyclomaticComplexity="2" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="2" numMethods="2" />
+          <Summary numSequencePoints="15" visitedSequencePoints="15" numBranchPoints="2" visitedBranchPoints="2" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="2" numMethods="2" />
           <FullName>RhDomain.Services.TecnologiaServices.TecnologiaAlterador</FullName>
           <Methods>
-            <Method cyclomaticComplexity="2" nPathComplexity="0" sequenceCoverage="90" branchCoverage="50" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
-              <Summary numSequencePoints="10" visitedSequencePoints="9" numBranchPoints="2" visitedBranchPoints="1" sequenceCoverage="90" branchCoverage="50" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+            <Method cyclomaticComplexity="2" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="10" visitedSequencePoints="10" numBranchPoints="2" visitedBranchPoints="2" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
               <MetadataToken />
               <Name>RhDomain.Dto.TecnologiaDto RhDomain.Services.TecnologiaServices.TecnologiaAlterador::Alterar(RhDomain.Dto.TecnologiaDto)</Name>
               <FileRef uid="13" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="23" ordinal="0" sl="23" sc="1" el="23" ec="2" bec="0" bev="0" fileid="13" />
-                <SequencePoint vc="1" uspid="24" ordinal="1" sl="24" sc="1" el="24" ec="2" bec="2" bev="1" fileid="13" />
+                <SequencePoint vc="2" uspid="23" ordinal="0" sl="23" sc="1" el="23" ec="2" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="2" uspid="24" ordinal="1" sl="24" sc="1" el="24" ec="2" bec="2" bev="2" fileid="13" />
                 <SequencePoint vc="1" uspid="25" ordinal="2" sl="25" sc="1" el="25" ec="2" bec="0" bev="0" fileid="13" />
                 <SequencePoint vc="1" uspid="26" ordinal="3" sl="26" sc="1" el="26" ec="2" bec="0" bev="0" fileid="13" />
                 <SequencePoint vc="1" uspid="27" ordinal="4" sl="27" sc="1" el="27" ec="2" bec="0" bev="0" fileid="13" />
                 <SequencePoint vc="1" uspid="28" ordinal="5" sl="28" sc="1" el="28" ec="2" bec="0" bev="0" fileid="13" />
                 <SequencePoint vc="1" uspid="29" ordinal="6" sl="29" sc="1" el="29" ec="2" bec="0" bev="0" fileid="13" />
                 <SequencePoint vc="1" uspid="30" ordinal="7" sl="30" sc="1" el="30" ec="2" bec="0" bev="0" fileid="13" />
-                <SequencePoint vc="0" uspid="32" ordinal="8" sl="32" sc="1" el="32" ec="2" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="1" uspid="32" ordinal="8" sl="32" sc="1" el="32" ec="2" bec="0" bev="0" fileid="13" />
                 <SequencePoint vc="1" uspid="34" ordinal="9" sl="34" sc="1" el="34" ec="2" bec="0" bev="0" fileid="13" />
               </SequencePoints>
               <BranchPoints>
                 <BranchPoint vc="1" uspid="24" ordinal="0" path="0" offset="19" offsetend="21" sl="24" fileid="13" />
-                <BranchPoint vc="0" uspid="24" ordinal="1" path="1" offset="19" offsetend="82" sl="24" fileid="13" />
+                <BranchPoint vc="1" uspid="24" ordinal="1" path="1" offset="19" offsetend="82" sl="24" fileid="13" />
               </BranchPoints>
-              <MethodPoint vc="9" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="23" ec="1" el="34" bec="0" bev="0" fileid="13" xmlns:p8="xsi" />
+              <MethodPoint vc="10" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="23" ec="1" el="34" bec="0" bev="0" fileid="13" xmlns:p8="xsi" />
             </Method>
             <Method cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="True" isGetter="False" isSetter="False" isStatic="True">
               <Summary numSequencePoints="5" visitedSequencePoints="5" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
@@ -649,11 +649,11 @@
               <Name>System.Void RhDomain.Services.TecnologiaServices.TecnologiaAlterador::.ctor(RhDomain.Interfaces.Repositories.ITecnologiaRepository,RhDomain.Interfaces.UnitOfWork.IUnitOfWork)</Name>
               <FileRef uid="13" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="16" ordinal="0" sl="16" sc="1" el="16" ec="2" bec="0" bev="0" fileid="13" />
-                <SequencePoint vc="1" uspid="17" ordinal="1" sl="17" sc="1" el="17" ec="2" bec="0" bev="0" fileid="13" />
-                <SequencePoint vc="1" uspid="18" ordinal="2" sl="18" sc="1" el="18" ec="2" bec="0" bev="0" fileid="13" />
-                <SequencePoint vc="1" uspid="19" ordinal="3" sl="19" sc="1" el="19" ec="2" bec="0" bev="0" fileid="13" />
-                <SequencePoint vc="1" uspid="20" ordinal="4" sl="20" sc="1" el="20" ec="2" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="2" uspid="16" ordinal="0" sl="16" sc="1" el="16" ec="2" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="2" uspid="17" ordinal="1" sl="17" sc="1" el="17" ec="2" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="2" uspid="18" ordinal="2" sl="18" sc="1" el="18" ec="2" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="2" uspid="19" ordinal="3" sl="19" sc="1" el="19" ec="2" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="2" uspid="20" ordinal="4" sl="20" sc="1" el="20" ec="2" bec="0" bev="0" fileid="13" />
               </SequencePoints>
               <BranchPoints />
               <MethodPoint vc="5" uspid="0" p8:type="SequencePoint" ordinal="1" offset="1" sc="0" sl="16" ec="1" el="20" bec="0" bev="0" fileid="13" xmlns:p8="xsi" />
@@ -927,14 +927,14 @@
               <Name>System.Void RhDomain.Services.CandidatoTecnologiaServices.CandidatoTecnologiaArmazenador::.ctor(RhDomain.Interfaces.Repositories.ICandidatoTecnologiaRepository,RhDomain.Interfaces.UnitOfWork.IUnitOfWork,RhDomain.Interfaces.Repositories.IVagaTecnologiaRepository,RhDomain.Interfaces.Repositories.ICandidatoRepository)</Name>
               <FileRef uid="18" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="21" ordinal="0" sl="21" sc="1" el="21" ec="2" bec="0" bev="0" fileid="18" />
-                <SequencePoint vc="1" uspid="22" ordinal="1" sl="22" sc="1" el="22" ec="2" bec="0" bev="0" fileid="18" />
-                <SequencePoint vc="1" uspid="23" ordinal="2" sl="23" sc="1" el="23" ec="2" bec="0" bev="0" fileid="18" />
-                <SequencePoint vc="1" uspid="24" ordinal="3" sl="24" sc="1" el="24" ec="2" bec="0" bev="0" fileid="18" />
-                <SequencePoint vc="1" uspid="25" ordinal="4" sl="25" sc="1" el="25" ec="2" bec="0" bev="0" fileid="18" />
-                <SequencePoint vc="1" uspid="26" ordinal="5" sl="26" sc="1" el="26" ec="2" bec="0" bev="0" fileid="18" />
-                <SequencePoint vc="1" uspid="27" ordinal="6" sl="27" sc="1" el="27" ec="2" bec="0" bev="0" fileid="18" />
-                <SequencePoint vc="1" uspid="28" ordinal="7" sl="28" sc="1" el="28" ec="2" bec="0" bev="0" fileid="18" />
+                <SequencePoint vc="2" uspid="21" ordinal="0" sl="21" sc="1" el="21" ec="2" bec="0" bev="0" fileid="18" />
+                <SequencePoint vc="2" uspid="22" ordinal="1" sl="22" sc="1" el="22" ec="2" bec="0" bev="0" fileid="18" />
+                <SequencePoint vc="2" uspid="23" ordinal="2" sl="23" sc="1" el="23" ec="2" bec="0" bev="0" fileid="18" />
+                <SequencePoint vc="2" uspid="24" ordinal="3" sl="24" sc="1" el="24" ec="2" bec="0" bev="0" fileid="18" />
+                <SequencePoint vc="2" uspid="25" ordinal="4" sl="25" sc="1" el="25" ec="2" bec="0" bev="0" fileid="18" />
+                <SequencePoint vc="2" uspid="26" ordinal="5" sl="26" sc="1" el="26" ec="2" bec="0" bev="0" fileid="18" />
+                <SequencePoint vc="2" uspid="27" ordinal="6" sl="27" sc="1" el="27" ec="2" bec="0" bev="0" fileid="18" />
+                <SequencePoint vc="2" uspid="28" ordinal="7" sl="28" sc="1" el="28" ec="2" bec="0" bev="0" fileid="18" />
               </SequencePoints>
               <BranchPoints />
               <MethodPoint vc="8" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="21" ec="1" el="28" bec="0" bev="0" fileid="18" xmlns:p8="xsi" />
@@ -942,17 +942,17 @@
           </Methods>
         </Class>
         <Class>
-          <Summary numSequencePoints="11" visitedSequencePoints="10" numBranchPoints="4" visitedBranchPoints="2" sequenceCoverage="90.9" branchCoverage="50" maxCyclomaticComplexity="4" minCyclomaticComplexity="4" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+          <Summary numSequencePoints="11" visitedSequencePoints="11" numBranchPoints="4" visitedBranchPoints="3" sequenceCoverage="100" branchCoverage="75" maxCyclomaticComplexity="4" minCyclomaticComplexity="4" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
           <FullName>RhDomain.Services.CandidatoTecnologiaServices.CandidatoTecnologiaArmazenador/&lt;IncluirCandidatoTecnologia&gt;d__5</FullName>
           <Methods>
-            <Method cyclomaticComplexity="4" nPathComplexity="0" sequenceCoverage="90.9" branchCoverage="50" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
-              <Summary numSequencePoints="11" visitedSequencePoints="10" numBranchPoints="4" visitedBranchPoints="2" sequenceCoverage="90.9" branchCoverage="50" maxCyclomaticComplexity="4" minCyclomaticComplexity="4" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+            <Method cyclomaticComplexity="4" nPathComplexity="0" sequenceCoverage="100" branchCoverage="75" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="11" visitedSequencePoints="11" numBranchPoints="4" visitedBranchPoints="3" sequenceCoverage="100" branchCoverage="75" maxCyclomaticComplexity="4" minCyclomaticComplexity="4" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
               <MetadataToken />
               <Name>System.Void RhDomain.Services.CandidatoTecnologiaServices.CandidatoTecnologiaArmazenador/&lt;IncluirCandidatoTecnologia&gt;d__5::MoveNext()</Name>
               <FileRef uid="18" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="31" ordinal="0" sl="31" sc="1" el="31" ec="2" bec="0" bev="0" fileid="18" />
-                <SequencePoint vc="1" uspid="32" ordinal="1" sl="32" sc="1" el="32" ec="2" bec="4" bev="2" fileid="18" />
+                <SequencePoint vc="2" uspid="31" ordinal="0" sl="31" sc="1" el="31" ec="2" bec="0" bev="0" fileid="18" />
+                <SequencePoint vc="2" uspid="32" ordinal="1" sl="32" sc="1" el="32" ec="2" bec="4" bev="3" fileid="18" />
                 <SequencePoint vc="1" uspid="33" ordinal="2" sl="33" sc="1" el="33" ec="2" bec="0" bev="0" fileid="18" />
                 <SequencePoint vc="1" uspid="34" ordinal="3" sl="34" sc="1" el="34" ec="2" bec="0" bev="0" fileid="18" />
                 <SequencePoint vc="1" uspid="35" ordinal="4" sl="35" sc="1" el="35" ec="2" bec="0" bev="0" fileid="18" />
@@ -960,16 +960,16 @@
                 <SequencePoint vc="1" uspid="37" ordinal="6" sl="37" sc="1" el="37" ec="2" bec="0" bev="0" fileid="18" />
                 <SequencePoint vc="1" uspid="38" ordinal="7" sl="38" sc="1" el="38" ec="2" bec="0" bev="0" fileid="18" />
                 <SequencePoint vc="1" uspid="39" ordinal="8" sl="39" sc="1" el="39" ec="2" bec="0" bev="0" fileid="18" />
-                <SequencePoint vc="0" uspid="41" ordinal="9" sl="41" sc="1" el="41" ec="2" bec="0" bev="0" fileid="18" />
+                <SequencePoint vc="1" uspid="41" ordinal="9" sl="41" sc="1" el="41" ec="2" bec="0" bev="0" fileid="18" />
                 <SequencePoint vc="1" uspid="42" ordinal="10" sl="42" sc="1" el="42" ec="2" bec="0" bev="0" fileid="18" />
               </SequencePoints>
               <BranchPoints>
-                <BranchPoint vc="1" uspid="32" ordinal="0" path="0" offset="24" offsetend="26" sl="32" fileid="18" />
+                <BranchPoint vc="2" uspid="32" ordinal="0" path="0" offset="24" offsetend="26" sl="32" fileid="18" />
                 <BranchPoint vc="0" uspid="32" ordinal="1" path="1" offset="24" offsetend="42" sl="32" fileid="18" />
                 <BranchPoint vc="1" uspid="32" ordinal="2" path="0" offset="45" offsetend="50" sl="32" fileid="18" />
-                <BranchPoint vc="0" uspid="32" ordinal="3" path="1" offset="45" offsetend="330" sl="32" fileid="18" />
+                <BranchPoint vc="1" uspid="32" ordinal="3" path="1" offset="45" offsetend="330" sl="32" fileid="18" />
               </BranchPoints>
-              <MethodPoint vc="10" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="31" ec="1" el="42" bec="0" bev="0" fileid="18" xmlns:p8="xsi" />
+              <MethodPoint vc="11" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="31" ec="1" el="42" bec="0" bev="0" fileid="18" xmlns:p8="xsi" />
             </Method>
           </Methods>
         </Class>
@@ -2032,7 +2032,7 @@
               <Name>System.Int32 RhDomain.Dto.CandidatoTecnologiaDto::get_TecnologiaId()</Name>
               <FileRef uid="33" />
               <SequencePoints>
-                <SequencePoint vc="4" uspid="9" ordinal="0" sl="9" sc="1" el="9" ec="2" bec="0" bev="0" fileid="33" />
+                <SequencePoint vc="6" uspid="9" ordinal="0" sl="9" sc="1" el="9" ec="2" bec="0" bev="0" fileid="33" />
               </SequencePoints>
               <BranchPoints />
               <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="9" ec="1" el="9" bec="0" bev="0" fileid="33" xmlns:p8="xsi" />
@@ -2043,7 +2043,7 @@
               <Name>System.Int32 RhDomain.Dto.CandidatoTecnologiaDto::get_CandidatoId()</Name>
               <FileRef uid="33" />
               <SequencePoints>
-                <SequencePoint vc="3" uspid="10" ordinal="0" sl="10" sc="1" el="10" ec="2" bec="0" bev="0" fileid="33" />
+                <SequencePoint vc="4" uspid="10" ordinal="0" sl="10" sc="1" el="10" ec="2" bec="0" bev="0" fileid="33" />
               </SequencePoints>
               <BranchPoints />
               <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="1" offset="1" sc="0" sl="10" ec="1" el="10" bec="0" bev="0" fileid="33" xmlns:p8="xsi" />
@@ -2054,7 +2054,7 @@
               <Name>System.Int32 RhDomain.Dto.CandidatoTecnologiaDto::get_Peso()</Name>
               <FileRef uid="33" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="11" ordinal="0" sl="11" sc="1" el="11" ec="2" bec="0" bev="0" fileid="33" />
+                <SequencePoint vc="2" uspid="11" ordinal="0" sl="11" sc="1" el="11" ec="2" bec="0" bev="0" fileid="33" />
               </SequencePoints>
               <BranchPoints />
               <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="2" offset="2" sc="0" sl="11" ec="1" el="11" bec="0" bev="0" fileid="33" xmlns:p8="xsi" />
@@ -2062,7 +2062,7 @@
           </Methods>
         </Class>
         <Class>
-          <Summary numSequencePoints="3" visitedSequencePoints="2" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="66.66" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="2" numMethods="3" />
+          <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="3" numMethods="3" />
           <FullName>RhDomain.Dto.TecnologiaDto</FullName>
           <Methods>
             <Method cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="True" isSetter="False" isStatic="True">
@@ -2082,21 +2082,21 @@
               <Name>System.String RhDomain.Dto.TecnologiaDto::get_Descricao()</Name>
               <FileRef uid="34" />
               <SequencePoints>
-                <SequencePoint vc="11" uspid="11" ordinal="0" sl="11" sc="1" el="11" ec="2" bec="0" bev="0" fileid="34" />
+                <SequencePoint vc="13" uspid="11" ordinal="0" sl="11" sc="1" el="11" ec="2" bec="0" bev="0" fileid="34" />
               </SequencePoints>
               <BranchPoints />
               <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="1" offset="1" sc="0" sl="11" ec="1" el="11" bec="0" bev="0" fileid="34" xmlns:p8="xsi" />
             </Method>
-            <Method cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="100" isConstructor="False" isGetter="True" isSetter="False" isStatic="True">
-              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+            <Method cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="True" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
               <MetadataToken />
               <Name>System.Int32 RhDomain.Dto.TecnologiaDto::get_Peso()</Name>
               <FileRef uid="34" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="12" ordinal="0" sl="12" sc="1" el="12" ec="2" bec="0" bev="0" fileid="34" />
+                <SequencePoint vc="1" uspid="12" ordinal="0" sl="12" sc="1" el="12" ec="2" bec="0" bev="0" fileid="34" />
               </SequencePoints>
               <BranchPoints />
-              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="2" offset="2" sc="0" sl="12" ec="1" el="12" bec="0" bev="0" fileid="34" xmlns:p8="xsi" />
+              <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="2" offset="2" sc="0" sl="12" ec="1" el="12" bec="0" bev="0" fileid="34" xmlns:p8="xsi" />
             </Method>
           </Methods>
         </Class>
@@ -2171,7 +2171,7 @@
               <Name>System.String RhDomain.Dto.VagaComTecnologiaECandidatosDto::get_Descricao()</Name>
               <FileRef uid="36" />
               <SequencePoints>
-                <SequencePoint vc="9" uspid="11" ordinal="0" sl="11" sc="1" el="11" ec="2" bec="0" bev="0" fileid="36" />
+                <SequencePoint vc="10" uspid="11" ordinal="0" sl="11" sc="1" el="11" ec="2" bec="0" bev="0" fileid="36" />
               </SequencePoints>
               <BranchPoints />
               <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="1" offset="1" sc="0" sl="11" ec="1" el="11" bec="0" bev="0" fileid="36" xmlns:p8="xsi" />

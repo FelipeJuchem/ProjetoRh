@@ -44,9 +44,21 @@ namespace RhTests.VagaTests
             Assert.Equal(vagaDto, resultado);
         
         }
+
+        [Fact]
+        public void DeveRetornarExceptionComVagaInvalida()
+        {
+            var vagaDto = new VagaComTecnologiaECandidatosDto
+            {
+                Descricao = ""
+            };
+            var exception = Assert.Throws<Exception>(() => _vagaAlterador.Alterar(vagaDto));
+
+            Assert.Equal("Descrição deve estar preenchido!", exception.Message);
+        }
         
 
-        public void CriaSetupComVagaValida()
+        private void CriaSetupComVagaValida()
         {
             _vagaValidationMock.Setup(x => x.ValidaSeVagaDtoEstaPreenchido(It.IsAny<VagaComTecnologiaECandidatosDto>())).Returns(true);
         }

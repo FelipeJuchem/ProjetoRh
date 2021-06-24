@@ -40,5 +40,19 @@ namespace RhTests.TecnologiaTests
 
             Assert.Equal(tecnologiaDto.Descricao, tecnologia.Descricao);
         }
+
+        [Fact]
+        public void DeveRetornarExceptionComTecnologiaInvalida()
+        {
+            var tecnologiaDto = new TecnologiaDto
+            {
+                Descricao = "",
+                Peso = 0
+            };
+
+            var resultado = Assert.Throws<Exception>(() => _tecnologiaAlterador.Alterar(tecnologiaDto));
+
+            Assert.Equal("Descrição não pode estar vazia!", resultado.Message);
+        }
     }
 }

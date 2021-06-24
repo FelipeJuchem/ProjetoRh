@@ -1,8 +1,8 @@
-Û
+ž
 gC:\Projetos\ProjetoRH\RhProject\RhTests\CandidatoTecnologiaTests\CandidatoTecnologiaArmazenadorTests.cs
 
- 4
-8 W!! +44 ;
+ 4(
+8 W!! +44 ;DD@ _
 + 3 "" 
 > ` .!!Q s2
 4 L $   $""G _22 $(
@@ -18,7 +18,11 @@ gC:\Projetos\ProjetoRH\RhProject\RhTests\CandidatoTecnologiaTests\CandidatoTecno
 11 #
 22+ ,220 1
 330 1335 6
-44 77 $Í
+44 77 $
+
+;; F
+== &	DD{ ‘
+DD FF8 AÍ
 eC:\Projetos\ProjetoRH\RhProject\RhTests\CandidatoTecnologiaTests\CandidatoTecnologiaExcluidorTests.cs
 
  2
@@ -43,7 +47,7 @@ QC:\Projetos\ProjetoRH\RhProject\RhTests\CandidatoTests\CandidatoAlteradorTests.
  &
 
  (
-77 /!! 'F
+77 0!! 'F
 "" --X a00, 5111 :22- 633+ 444. 7P
 $$ --> J..8 D00 %11 %22 %33 %44 %
 --+ ,--0 1
@@ -61,12 +65,12 @@ RC:\Projetos\ProjetoRH\RhProject\RhTests\CandidatoTests\CandidatoArmazenadorTest
  '
 
  *
-DD /   '
+DD 0   '
 !! ))C O
 )) ++ $
 
 // -
-?? 111 )
+?? 211 )
 22 ::a m
 :: <<2 ;
 AA+ ,AA0 1
@@ -148,11 +152,11 @@ ZC:\Projetos\ProjetoRH\RhProject\RhTests\TecnologiaTests\PermitirExclusaoTecnolo
 66 ?
 88 #	::q „
 ::5 6::: ;
-<< >>e nÃ
+<< >>e n…
 SC:\Projetos\ProjetoRH\RhProject\RhTests\TecnologiaTests\TecnologiaAlteradorTests.cs
 
- )
-- A  ''  (
+ )(
+- A  ''  55; O(
 5 N %; T%% %
 + 3 ] e
 
@@ -161,7 +165,11 @@ SC:\Projetos\ProjetoRH\RhProject\RhTests\TecnologiaTests\TecnologiaAlteradorTest
  )(
  %%? I%%W a))2 <
    '') 6)) &
-%%, -%%1 2×
+%%, -%%1 2
+
+-- >
+// 55X e
+55 77< E×
 UC:\Projetos\ProjetoRH\RhProject\RhTests\TecnologiaTests\TecnologiaArmazenadorTests.cs
 
  +(
@@ -174,12 +182,12 @@ UC:\Projetos\ProjetoRH\RhProject\RhTests\TecnologiaTests\TecnologiaArmazenadorTe
  )
 
  +
-88 0   (
+88 1   (
 !! %%E R
 %% '' $
 
 ++ .
-== 2-- *
+== 3-- *
 .. 22c p
 22 443 <
 ::, -::1 2
@@ -270,24 +278,28 @@ dC:\Projetos\ProjetoRH\RhProject\RhTests\VagaTecnologiaTests\PermitirExclusaoDeV
    !!e s##- ;##D R$$< J
 !!, -!!1 2
 ""4 5""9 :
-$$- .$$2 3™
+$$- .$$2 3Û
 GC:\Projetos\ProjetoRH\RhProject\RhTests\VagaTests\VagaAlteradorTests.cs
 
- #
-' 5 ** *(
+ #(
+' 5 ** *77; I(
 / B / B)) 
 + 3 K S(
-/ B \ o33 
+/ B \ o?? 
 
  !
 
  #
-11 *!! "
+== +!! "
 "" ))N R(
 $$ ))9 @**3 :,,  
 ))& '))+ ,
-** ,," +
-33& '33+ ,É
+** ,," +
+
+11 8
+33 77R Y
+77 99= F
+??& '??+ ,É
 IC:\Projetos\ProjetoRH\RhProject\RhTests\VagaTests\VagaArmazenadorTests.cs
 
  %(
@@ -299,12 +311,12 @@ IC:\Projetos\ProjetoRH\RhProject\RhTests\VagaTests\VagaArmazenadorTests.cs
  #
 
  %
-;; *   "
+;; +   "
 !! &&9 @
 && (( $
 
 ,, (
-@@ ,.. $
+@@ -.. $
 // 44W ^
 44 665 >
 ==& '==+ ,

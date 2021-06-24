@@ -56,12 +56,12 @@ namespace RhTests.VagaTests
 
 
 
-        public void CriaSetupComVagaValida()
+        private void CriaSetupComVagaValida()
         {
             _vagaValidationMock.Setup(x => x.ValidaSeVagaDtoEstaPreenchido(It.IsAny<VagaComTecnologiaECandidatosDto>())).Returns(true);
         }
 
-        public void CriaSetupComVagaInvalida()
+        private void CriaSetupComVagaInvalida()
         {
             _vagaValidationMock.Setup(x => x.ValidaSeVagaDtoEstaPreenchido(It.IsAny<VagaComTecnologiaECandidatosDto>())).Returns(false);
         }
